@@ -1,6 +1,7 @@
 import Image from "next/image";
 import shadcn from "@/public/shadcn.jpeg";
 import FAQAccordionDemo from "./faq-accordion";
+import { ProcessAccordionDemo } from "./process-accordion";
 
 export function AccordionCard({
   children,
@@ -16,7 +17,7 @@ export function AccordionCard({
   return (
     <div
       className={
-        "flex shadow-lg rounded-lg min-h-64 h-fit pb-20 pt-2 items-center flex-col relative bg-gradient-to-t from-gray-100 to-white border px-6"
+        "flex shadow-lg rounded-lg min-h-96 pb-20 pt-2 items-center flex-col relative bg-gradient-to-t from-gray-100 to-white border px-6"
       }
     >
       {children}
@@ -45,6 +46,9 @@ export function Accordions() {
         <div className={"grid grid-cols-3 gap-4 p-4"}>
           <AccordionCard label={"FAQ Accordion"} componentName={"<FAQAccordion />"} shadComponentName="<Accordion />">
             <FAQAccordionDemo />
+          </AccordionCard>
+          <AccordionCard label={"Process Accordion"} componentName={"<ProcessAccordion />"}>
+            <ProcessAccordionDemo />
           </AccordionCard>
         </div>
       </>
