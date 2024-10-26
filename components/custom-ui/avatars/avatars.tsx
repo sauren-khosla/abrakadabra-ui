@@ -18,7 +18,7 @@ export function AvatarCard({
   return (
     <div
       className={
-        "flex shadow-lg rounded-lg min-h-40 pt-2 items-center justify-center pb-10 flex-col relative bg-gradient-to-t from-gray-100 to-white border px-6"
+        "flex shadow-lg rounded-lg min-h-44 items-center justify-center pt-2 pb-12 flex-col relative bg-gradient-to-t from-gray-100 to-white border px-6"
       }
     >
       {children}
