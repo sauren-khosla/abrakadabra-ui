@@ -68,6 +68,8 @@ const ProgressCircleWithIcon = React.forwardRef<
         </svg>
         <Image
           src={imageSrc}
+          width={100}
+          height={100}
           alt="Progress"
           className="absolute top-1/4 left-1/4 w-1/2 h-1/2 rounded-full object-cover"
         />

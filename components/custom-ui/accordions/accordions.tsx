@@ -1,7 +1,6 @@
 import Image from "next/image";
 import shadcn from "@/public/shadcn.jpeg";
-import { MultiSelectAccordionDemo } from "./multi-accordions";
-import { NestedAccordionDemo } from "./nested-accordions";
+import FAQAccordionDemo from "./faq-accordion";
 
 export function AccordionCard({
   children,
@@ -44,15 +43,8 @@ export function Accordions() {
     <>
         <div className={"font-medium mt-6 ml-6"}>{"Accordions"}</div>
         <div className={"grid grid-cols-3 gap-4 p-4"}>
-          <AccordionCard
-            label={"Multi-Select Accordion"}
-            componentName={"<MultiSelectAccordion />"}
-            shadComponentName={"<Accordion />"}
-          >
-            <MultiSelectAccordionDemo />
-          </AccordionCard>
-          <AccordionCard label={"Nested Accordion"} componentName={"<NestedAccordion />"} shadComponentName="<Accordion />">
-            <NestedAccordionDemo />
+          <AccordionCard label={"FAQ Accordion"} componentName={"<FAQAccordion />"} shadComponentName="<Accordion />">
+            <FAQAccordionDemo />
           </AccordionCard>
         </div>
       </>
