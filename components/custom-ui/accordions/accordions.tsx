@@ -1,7 +1,8 @@
 import Image from "next/image";
 import shadcn from "@/public/shadcn.jpeg";
 import FAQAccordionDemo from "./faq-accordion";
-import { ProcessAccordionDemo } from "./process-accordion";
+import ProcessAccordionDemo from "./process-accordion";
+import FeaturesAccordion from "./features-accordion";
 
 export function AccordionCard({
   children,
@@ -47,8 +48,11 @@ export function Accordions() {
           <AccordionCard label={"FAQ Accordion"} componentName={"<FAQAccordion />"} shadComponentName="<Accordion />">
             <FAQAccordionDemo />
           </AccordionCard>
-          <AccordionCard label={"Process Accordion"} componentName={"<ProcessAccordion />"}>
+          <AccordionCard label={"Process Accordion"} componentName={"<ProcessAccordion />"} shadComponentName="<Accordion />">
             <ProcessAccordionDemo />
+          </AccordionCard>
+          <AccordionCard label={"Features Accordion"} componentName={"<FeaturesAccordion />"} shadComponentName="<Accordion />">
+            <FeaturesAccordion />
           </AccordionCard>
         </div>
       </>

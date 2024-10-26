@@ -68,7 +68,7 @@ export function ProcessAccordion({ steps }: ProcessAccordionProps) {
       >
         {steps.map((step) => (
           <AccordionItem key={step.id} value={step.id}>
-            <AccordionTrigger>{step.title}</AccordionTrigger>
+            <AccordionTrigger className="font-normal">{step.title}</AccordionTrigger>
             <AccordionContent>
               <p>{step.description}</p>
             </AccordionContent>
@@ -105,6 +105,6 @@ const steps = [
   },
 ]
 
-export function ProcessAccordionDemo() {
+export default function ProcessAccordionDemo() {
   return <ProcessAccordion steps={steps} />
 }

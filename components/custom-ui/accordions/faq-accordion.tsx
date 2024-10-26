@@ -82,7 +82,7 @@ export function FAQAccordion({ faqs }: FAQAccordionProps) {
       <Accordion type="multiple">
         {filteredFAQs.map((faq) => (
           <AccordionItem key={faq.id} value={faq.id}>
-            <AccordionTrigger className="flex items-center">
+            <AccordionTrigger className="flex items-center font-normal">
               {faq.question}
             </AccordionTrigger>
             <AccordionContent>
