@@ -2,6 +2,7 @@
 
 import * as React from "react";
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 
 export interface ProgressCircleWithIconProps
   extends React.HTMLAttributes<HTMLDivElement> {
@@ -65,7 +66,7 @@ const ProgressCircleWithIcon = React.forwardRef<
             transform={`rotate(-90 ${center} ${center})`}
           />
         </svg>
-        <img
+        <Image
           src={imageSrc}
           alt="Progress"
           className="absolute top-1/4 left-1/4 w-1/2 h-1/2 rounded-full object-cover"

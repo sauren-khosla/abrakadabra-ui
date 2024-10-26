@@ -4,8 +4,7 @@ import * as React from "react"
 import { Progress } from "@/components/ui/progress"
 import { cn } from "@/lib/utils"
 
-export interface BatteryProgressProps
-  extends React.ComponentPropsWithoutRef<typeof Progress> { }
+export type BatteryProgressProps = React.ComponentPropsWithoutRef<typeof Progress>;
 
 const BatteryProgress = React.forwardRef<
   React.ElementRef<typeof Progress>,

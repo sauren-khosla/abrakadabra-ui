@@ -1,6 +1,7 @@
 import Image from "next/image";
 import shadcn from "@/public/shadcn.jpeg";
 import { MultiSelectAccordionDemo } from "./multi-accordions";
+import { NestedAccordionDemo } from "./nested-accordions";
 
 export function AccordionCard({
   children,
@@ -16,7 +17,7 @@ export function AccordionCard({
   return (
     <div
       className={
-        "flex shadow-lg rounded-lg h-fit pb-20 pt-2 items-center flex-col relative bg-gradient-to-t from-gray-100 to-white border px-6"
+        "flex shadow-lg rounded-lg min-h-64 h-fit pb-20 pt-2 items-center flex-col relative bg-gradient-to-t from-gray-100 to-white border px-6"
       }
     >
       {children}
@@ -49,6 +50,9 @@ export function Accordions() {
             shadComponentName={"<Accordion />"}
           >
             <MultiSelectAccordionDemo />
+          </AccordionCard>
+          <AccordionCard label={"Nested Accordion"} componentName={"<NestedAccordion />"} shadComponentName="<Accordion />">
+            <NestedAccordionDemo />
           </AccordionCard>
         </div>
       </>
