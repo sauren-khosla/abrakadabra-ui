@@ -1,6 +1,7 @@
 import Image from "next/image";
 import shadcn from "@/public/shadcn.jpeg";
 import RecentsCommandDemo from "./recents-command";
+import CategoriesCommandDemo from "./categories-command";
 
 export function CommandsCard({
   children,
@@ -45,6 +46,9 @@ export function Commands() {
       <div className={"grid grid-cols-3 gap-4 p-4"}>
         <CommandsCard label={"Recents Command"} componentName={"<RecentsCommand />"} shadComponentName="<Command />">
           <RecentsCommandDemo />
+        </CommandsCard>
+        <CommandsCard label={"Categories Command"} componentName={"<CategoriesCommand />"} shadComponentName="<Command />">
+          <CategoriesCommandDemo />
         </CommandsCard>
       </div>
     </>
