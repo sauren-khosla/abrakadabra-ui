@@ -5,7 +5,9 @@ import { Badges } from "@/components/custom-ui/badges/badges";
 import { Buttons } from "@/components/custom-ui/buttons/buttons";
 import { Commands } from "@/components/custom-ui/commands/commands";
 import { Inputs } from "@/components/custom-ui/inputs/inputs";
-import ProgressBars from "@/components/custom-ui/progress-bars/progress-bars";
+import { MenuBars } from "@/components/custom-ui/menubars/menubars";
+import { ProgressBars } from "@/components/custom-ui/progress-bars/progress-bars";
+import { Sliders } from "@/components/custom-ui/sliders/sliders";
 
 import React from "react";
 
@@ -19,7 +21,9 @@ export default async function CustomUI() {
       <Buttons />
       <Commands />
       <Inputs />
+      <MenuBars />
       <ProgressBars />
+      <Sliders />
     </>
   );
 }

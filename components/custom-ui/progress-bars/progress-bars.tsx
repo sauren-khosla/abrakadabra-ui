@@ -20,7 +20,7 @@ export function ProgressCard({
   return (
     <div
       className={
-        "flex shadow-lg rounded-lg h-48 justify-center items-center flex-col relative bg-gradient-to-t from-gray-100 to-white pb-6 border"
+        "flex shadow-lg rounded-lg min-h-72 justify-center items-center flex-col relative bg-gradient-to-t from-gray-100 to-white pb-6 border"
       }
     >
       {children}
@@ -42,7 +42,7 @@ export function ProgressCard({
   );
 }
 
-export default async function ProgressBars() {
+export async function ProgressBars() {
   return (
       <>
         <div className={"font-medium mt-6 ml-6"}>{"Progress Indicators"}</div>
