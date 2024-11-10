@@ -1,6 +1,9 @@
 import Image from "next/image";
 import shadcn from "@/public/shadcn.jpeg";
-import { PasswordStrengthInput } from "./password-strength-input";
+import PasswordStrengthInputDemo from "./password-strength-input";
+import ValidatedInputDemo from "./validated-input";
+import FloatingLabelInputDemo from "./floating-label-input";
+import ValidatedInputAltDemo from "./validated-input-alt";
 
 export function InputsCard({
   children,
@@ -44,7 +47,16 @@ export function Inputs() {
       <div className={"font-medium mt-6 ml-6"}>{"Inputs"}</div>
       <div className={"grid grid-cols-3 gap-4 p-4"}>
         <InputsCard label={"Password Strength Input"} componentName={"<PasswordStrengthInput />"} shadComponentName="<Input />">
-          <PasswordStrengthInput />
+          <PasswordStrengthInputDemo />
+        </InputsCard>
+        <InputsCard label={"Validated Input"} componentName={"<ValidatedInput />"} shadComponentName="<Input />">
+          <ValidatedInputDemo />
+        </InputsCard>
+        <InputsCard label={"Validated Input Alt"} componentName={"<ValidatedInputAlt />"} shadComponentName="<Input />">
+          <ValidatedInputAltDemo />
+        </InputsCard>
+        <InputsCard label={"Floating Label Input"} componentName={"<FloatingLabelInput />"} shadComponentName="<Input />">
+          <FloatingLabelInputDemo />
         </InputsCard>
       </div>
     </>

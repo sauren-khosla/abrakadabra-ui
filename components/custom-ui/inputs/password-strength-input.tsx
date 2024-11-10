@@ -140,7 +140,7 @@ PasswordStrengthInput.displayName = "PasswordStrengthInput"
 
 export default function PasswordStrengthInputDemo() {
   return (
-    <div className="flex justify-center items-center h-screen">
+    <div className="flex justify-center items-center w-full">
       <PasswordStrengthInput />
     </div>
   )
