@@ -69,4 +69,6 @@ const CircularProgress = React.forwardRef<SVGSVGElement, CircularProgressProps>(
 
 CircularProgress.displayName = "CircularProgress";
 
-export { CircularProgress };
+export default function CircularProgressDemo() {
+  return <CircularProgress value={50} />
+}

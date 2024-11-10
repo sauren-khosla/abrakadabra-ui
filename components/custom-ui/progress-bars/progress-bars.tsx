@@ -1,10 +1,10 @@
 import Image from "next/image";
 import shadcn from "@/public/shadcn.jpeg";
-import { BatteryProgress } from "./battery-progress";
-import { ProgressCircleWithIcon } from "./circle-icon-progress";
-import { CircularProgress } from "./circular-progress";
-import { FloatingLabelProgress } from "./floating-label-progress";
-import { SegmentedProgress } from "./segmented-progress";
+import BatteryProgressDemo from "./battery-progress";
+import ProgressCircleWithIconDemo from "./circle-icon-progress";
+import CircularProgressDemo from "./circular-progress";
+import FloatingLabelProgressDemo from "./floating-label-progress";
+import SegmentedProgressDemo from "./segmented-progress";
 
 export function ProgressCard({
   children,
@@ -46,29 +46,29 @@ export async function ProgressBars() {
   return (
       <>
         <div className={"font-medium mt-6 ml-6"}>{"Progress Indicators"}</div>
-        <div className={"grid grid-cols-3 gap-4 p-4"}>
+        <div className={"grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 p-4"}>
           <ProgressCard
             label={"Battery Progress"}
             componentName={"<BatteryProgress />"}
             shadComponentName={"<Progress />"}
           >
-            <BatteryProgress value={50} />
+            <BatteryProgressDemo />
           </ProgressCard>
           <ProgressCard label={"Circle with Icon"} componentName={"<ProgressCircleWithImage />"}>
-            <ProgressCircleWithIcon value={50} imageSrc={"/shadcn.jpeg"} />
+            <ProgressCircleWithIconDemo />
           </ProgressCard>
           <ProgressCard label={"Circular"} componentName={"<CircularProgress />"}>
-            <CircularProgress value={50} />
+            <CircularProgressDemo />
           </ProgressCard>
           <ProgressCard
             label={"Floating Label"}
             componentName={"<FloatingLabelProgress />"}
             shadComponentName={"<Progress />"}
           >
-            <FloatingLabelProgress value={50} />
+            <FloatingLabelProgressDemo />
           </ProgressCard>
           <ProgressCard label={"Segmented"} componentName={"<SegmentedProgress />"}>
-            <SegmentedProgress segments={5} completed={3} />
+            <SegmentedProgressDemo />
           </ProgressCard>
         </div>
       </>

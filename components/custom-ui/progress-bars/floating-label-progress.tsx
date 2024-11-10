@@ -29,4 +29,6 @@ const FloatingLabelProgress = React.forwardRef<
 
 FloatingLabelProgress.displayName = "FloatingLabelProgress"
 
-export { FloatingLabelProgress }
+export default function FloatingLabelProgressDemo() {
+  return <FloatingLabelProgress value={50} />
+}

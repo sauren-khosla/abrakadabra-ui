@@ -45,7 +45,7 @@ export function Inputs() {
   return (
     <>
       <div className={"font-medium mt-6 ml-6"}>{"Inputs"}</div>
-      <div className={"grid grid-cols-3 gap-4 p-4"}>
+      <div className={"grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 p-4"}>
         <InputsCard label={"Password Strength Input"} componentName={"<PasswordStrengthInput />"} shadComponentName="<Input />">
           <PasswordStrengthInputDemo />
         </InputsCard>

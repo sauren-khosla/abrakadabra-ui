@@ -80,4 +80,8 @@ const ProgressCircleWithIcon = React.forwardRef<
 
 ProgressCircleWithIcon.displayName = "ProgressCircleWithImage";
 
-export { ProgressCircleWithIcon };
+export default function ProgressCircleWithIconDemo() {
+  return (
+    <ProgressCircleWithIcon value={50} imageSrc={"/shadcn.jpeg"} />
+  );
+}

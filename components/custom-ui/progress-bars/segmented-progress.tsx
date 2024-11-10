@@ -14,7 +14,7 @@ const SegmentedProgress = React.forwardRef<
   SegmentedProgressProps
 >(({ className, segments, completed, ...props }, ref) => {
   return (
-    <div ref={ref} className={cn("flex w-96", className)} {...props}>
+    <div ref={ref} className={cn("flex w-64 sm:w-64 md:w-56", className)} {...props}>
       {Array.from({ length: segments }, (_, index) => (
         <div
           key={index}
@@ -30,4 +30,7 @@ const SegmentedProgress = React.forwardRef<
 
 SegmentedProgress.displayName = "SegmentedProgress";
 
-export { SegmentedProgress };
+export default function SegmentedProgressDemo() {
+  return <SegmentedProgress segments={5} completed={3} />
+}
+

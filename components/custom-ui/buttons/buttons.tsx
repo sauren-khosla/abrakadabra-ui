@@ -43,7 +43,7 @@ export function Buttons() {
   return (
     <>
       <div className={"font-medium mt-6 ml-6"}>{"Buttons"}</div>
-      <div className={"grid grid-cols-3 gap-4 p-4"}>
+      <div className={"grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 p-4"}>
         <ButtonsCard label={"Split Button"} componentName={"<SplitButton />"} shadComponentName="<Button />">
           <SplitButtonDemo />
         </ButtonsCard>
