@@ -1,11 +1,9 @@
 import Image from "next/image";
 import shadcn from "@/public/shadcn.jpeg";
-import IconBadgeDemo from "./icon-badge";
-import GroupBadgeDemo from "./group-badge";
-import CloseBadgeDemo from "./close-badge";
+import IconSliderDemo from "./icon-slider";
+import TooltipSliderDemo from "./tooltip-slider";
 
-
-export function BadgesCard({
+export function SlidersCard({
   children,
   label,
   componentName,
@@ -19,7 +17,7 @@ export function BadgesCard({
   return (
     <div
       className={
-        "flex shadow-lg rounded-lg min-h-72 items-center justify-center pb-16 flex-col relative bg-gradient-to-t from-gray-100 to-white border px-6"
+        "flex shadow-lg rounded-lg min-h-72 items-center justify-center pb-6 flex-col relative bg-gradient-to-t from-gray-100 to-white border px-6"
       }
     >
       {children}
@@ -41,20 +39,17 @@ export function BadgesCard({
   );
 }
 
-export function Badges() {
+export default function Sliders() {
   return (
     <>
-      <div className={"font-medium mt-6 ml-6"}>{"Badges"}</div>
+      <div className={"font-medium mt-4 ml-6"}>{"Sliders"}</div>
       <div className={"grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 p-4"}>
-        <BadgesCard label={"Icon Badge"} componentName={"<IconBadge />"} shadComponentName="<Badge />">
-          <IconBadgeDemo />
-        </BadgesCard>
-        <BadgesCard label={"Group Badge"} componentName={"<GroupBadge />"} shadComponentName="<Badge />">
-          <GroupBadgeDemo />
-        </BadgesCard>
-        <BadgesCard label={"Close Badge"} componentName={"<CloseBadge />"} shadComponentName="<Badge />">
-          <CloseBadgeDemo />
-        </BadgesCard>
+        <SlidersCard label={"Icon Slider"} componentName={"<IconSlider />"} shadComponentName="<Slider />">
+          <IconSliderDemo />
+        </SlidersCard>
+        <SlidersCard label={"Tooltip Slider"} componentName={"<TooltipSlider />"} shadComponentName="<Slider />">
+          <TooltipSliderDemo />
+        </SlidersCard>
       </div>
     </>
   )

@@ -38,10 +38,10 @@ export function MenuBarsCard({
   );
 }
 
-export function MenuBars() {
+export default function MenuBars() {
   return (
     <>
-      <div className={"font-medium mt-6 ml-6"}>{"Menubars"}</div>
+      <div className={"font-medium mt-4 ml-6"}>{"Menubars"}</div>
       <div className={"grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 p-4"}>
         <MenuBarsCard label={"Multi-Level Menubar"} componentName={"<MultiLevelMenubar />"} shadComponentName="<Menubar />">
           <MultiLevelMenubarDemo />

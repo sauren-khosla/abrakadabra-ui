@@ -1,10 +1,11 @@
 import Image from "next/image";
 import shadcn from "@/public/shadcn.jpeg";
-import StatusAvatarDemo from "./status-avatar";
-import GroupAvatarDemo from "./group-avatar";
-import DropdownAvatarDemo from "./dropdown-avatar";
+import IconBadgeDemo from "./icon-badge";
+import GroupBadgeDemo from "./group-badge";
+import CloseBadgeDemo from "./close-badge";
 
-export function AvatarCard({
+
+export function BadgesCard({
   children,
   label,
   componentName,
@@ -18,7 +19,7 @@ export function AvatarCard({
   return (
     <div
       className={
-        "flex shadow-lg rounded-lg min-h-44 items-center justify-center pt-2 pb-12 flex-col relative bg-gradient-to-t from-gray-100 to-white border px-6"
+        "flex shadow-lg rounded-lg min-h-72 items-center justify-center pb-16 flex-col relative bg-gradient-to-t from-gray-100 to-white border px-6"
       }
     >
       {children}
@@ -40,20 +41,20 @@ export function AvatarCard({
   );
 }
 
-export function Avatars() {
+export default function Badges() {
   return (
     <>
-      <div className={"font-medium mt-6 ml-6"}>{"Avatars"}</div>
+      <div className={"font-medium mt-4 ml-6"}>{"Badges"}</div>
       <div className={"grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 p-4"}>
-        <AvatarCard label={"Status Avatar"} componentName={"<StatusAvatar />"} shadComponentName="<Avatar />">
-          <StatusAvatarDemo />
-        </AvatarCard>
-        <AvatarCard label={"Group Avatar"} componentName={"<GroupAvatar />"} shadComponentName="<Avatar />">
-          <GroupAvatarDemo />
-        </AvatarCard>
-        <AvatarCard label={"Dropdown Avatar"} componentName={"<DropdownAvatar />"} shadComponentName="<Avatar />">
-          <DropdownAvatarDemo />
-        </AvatarCard>
+        <BadgesCard label={"Icon Badge"} componentName={"<IconBadge />"} shadComponentName="<Badge />">
+          <IconBadgeDemo />
+        </BadgesCard>
+        <BadgesCard label={"Group Badge"} componentName={"<GroupBadge />"} shadComponentName="<Badge />">
+          <GroupBadgeDemo />
+        </BadgesCard>
+        <BadgesCard label={"Close Badge"} componentName={"<CloseBadge />"} shadComponentName="<Badge />">
+          <CloseBadgeDemo />
+        </BadgesCard>
       </div>
     </>
   )

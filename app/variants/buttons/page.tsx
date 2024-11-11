@@ -1,11 +1,9 @@
 import Image from "next/image";
 import shadcn from "@/public/shadcn.jpeg";
-import PasswordStrengthInputDemo from "./password-strength-input";
-import ValidatedInputDemo from "./validated-input";
-import FloatingLabelInputDemo from "./floating-label-input";
-import ValidatedInputAltDemo from "./validated-input-alt";
+import SplitButtonDemo from "./split-button";
+import BadgeButtonDemo from "./badge-button";
 
-export function InputsCard({
+export function ButtonsCard({
   children,
   label,
   componentName,
@@ -41,23 +39,17 @@ export function InputsCard({
   );
 }
 
-export function Inputs() {
+export default function Buttons() {
   return (
     <>
-      <div className={"font-medium mt-6 ml-6"}>{"Inputs"}</div>
+      <div className={"font-medium mt-4 ml-6"}>{"Buttons"}</div>
       <div className={"grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 p-4"}>
-        <InputsCard label={"Password Strength Input"} componentName={"<PasswordStrengthInput />"} shadComponentName="<Input />">
-          <PasswordStrengthInputDemo />
-        </InputsCard>
-        <InputsCard label={"Validated Input"} componentName={"<ValidatedInput />"} shadComponentName="<Input />">
-          <ValidatedInputDemo />
-        </InputsCard>
-        <InputsCard label={"Validated Input Alt"} componentName={"<ValidatedInputAlt />"} shadComponentName="<Input />">
-          <ValidatedInputAltDemo />
-        </InputsCard>
-        <InputsCard label={"Floating Label Input"} componentName={"<FloatingLabelInput />"} shadComponentName="<Input />">
-          <FloatingLabelInputDemo />
-        </InputsCard>
+        <ButtonsCard label={"Split Button"} componentName={"<SplitButton />"} shadComponentName="<Button />">
+          <SplitButtonDemo />
+        </ButtonsCard>
+        <ButtonsCard label={"Badge Button"} componentName={"<BadgeButton />"} shadComponentName="<Button />">
+          <BadgeButtonDemo />
+        </ButtonsCard>
       </div>
     </>
   )

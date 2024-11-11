@@ -39,10 +39,10 @@ export function AlertCard({
   );
 }
 
-export function Alerts() {
+export default function Alerts() {
   return (
     <>
-      <div className={"font-medium mt-6 ml-6"}>{"Alerts"}</div>
+      <div className={"font-medium mt-4 ml-6"}>{"Alerts"}</div>
       <div className={"grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 p-4"}>
         <AlertCard label={"Dismissable Alert"} componentName={"<DismissableAlert />"} shadComponentName="<Alert />">
           <DismissibleAlertDemo />

@@ -17,7 +17,7 @@ import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "./ui/collap
 
 const items = [
   {
-    title: "Variants",
+    title: "Component Variants",
     url: "/variants",
     icon: Split,
     subItems: [

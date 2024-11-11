@@ -42,10 +42,10 @@ export function ProgressCard({
   );
 }
 
-export async function ProgressBars() {
+export default function ProgressBars() {
   return (
       <>
-        <div className={"font-medium mt-6 ml-6"}>{"Progress Indicators"}</div>
+        <div className={"font-medium mt-4 ml-6"}>{"Progress Indicators"}</div>
         <div className={"grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 p-4"}>
           <ProgressCard
             label={"Battery Progress"}

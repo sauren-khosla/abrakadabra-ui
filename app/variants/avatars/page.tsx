@@ -1,9 +1,10 @@
 import Image from "next/image";
 import shadcn from "@/public/shadcn.jpeg";
-import IconSliderDemo from "./icon-slider";
-import TooltipSliderDemo from "./tooltip-slider";
+import StatusAvatarDemo from "./status-avatar";
+import GroupAvatarDemo from "./group-avatar";
+import DropdownAvatarDemo from "./dropdown-avatar";
 
-export function SlidersCard({
+export function AvatarCard({
   children,
   label,
   componentName,
@@ -17,7 +18,7 @@ export function SlidersCard({
   return (
     <div
       className={
-        "flex shadow-lg rounded-lg min-h-72 items-center justify-center pb-6 flex-col relative bg-gradient-to-t from-gray-100 to-white border px-6"
+        "flex shadow-lg rounded-lg min-h-44 items-center justify-center pt-2 pb-12 flex-col relative bg-gradient-to-t from-gray-100 to-white border px-6"
       }
     >
       {children}
@@ -39,17 +40,20 @@ export function SlidersCard({
   );
 }
 
-export function Sliders() {
+export default function Avatars() {
   return (
     <>
-      <div className={"font-medium mt-6 ml-6"}>{"Sliders"}</div>
+      <div className={"font-medium mt-4 ml-6"}>{"Avatars"}</div>
       <div className={"grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 p-4"}>
-        <SlidersCard label={"Icon Slider"} componentName={"<IconSlider />"} shadComponentName="<Slider />">
-          <IconSliderDemo />
-        </SlidersCard>
-        <SlidersCard label={"Tooltip Slider"} componentName={"<TooltipSlider />"} shadComponentName="<Slider />">
-          <TooltipSliderDemo />
-        </SlidersCard>
+        <AvatarCard label={"Status Avatar"} componentName={"<StatusAvatar />"} shadComponentName="<Avatar />">
+          <StatusAvatarDemo />
+        </AvatarCard>
+        <AvatarCard label={"Group Avatar"} componentName={"<GroupAvatar />"} shadComponentName="<Avatar />">
+          <GroupAvatarDemo />
+        </AvatarCard>
+        <AvatarCard label={"Dropdown Avatar"} componentName={"<DropdownAvatar />"} shadComponentName="<Avatar />">
+          <DropdownAvatarDemo />
+        </AvatarCard>
       </div>
     </>
   )

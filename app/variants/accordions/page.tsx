@@ -3,12 +3,11 @@ import shadcn from "@/public/shadcn.jpeg";
 import FeaturesAccordion from "./features-accordion";
 import ProcessAccordionDemo from "./process-accordion";
 import FAQAccordionDemo from "./faq-accordion";
+import { Badge } from "@/components/ui/badge";
+import { ExternalLink } from "lucide-react";
 
 export function AccordionCard({
   children,
-  label,
-  componentName,
-  shadComponentName,
 }: {
   children: React.ReactNode;
   label: string;
@@ -18,24 +17,10 @@ export function AccordionCard({
   return (
     <div
       className={
-        "flex shadow-lg rounded-lg min-h-96 pb-20 pt-2 items-center flex-col relative bg-gradient-to-t from-gray-100 to-white border px-6"
+        "flex rounded-lg min-h-96 pb-20 pt-2 items-center flex-col relative border mb-8"
       }
     >
       {children}
-      <div className={"absolute bottom-4 left-4 flex flex-col gap-y-1"}>
-        <span className={"font-light text-sm"}>{label}</span>
-        <span className={"font-extralight text-xs text-gray-500"}>{componentName}</span>
-      </div>
-      {shadComponentName ? (
-        <div
-          className={
-            "absolute bottom-4 right-4 bg-gray-50 flex justify-center items-center gap-x-2 text-xs rounded px-2 py-1 shadow-md"
-          }
-        >
-          <Image src={shadcn} alt={"Shadcn Logo"} width={16} height={16} className={"rounded-sm"} />
-          <span>{shadComponentName}</span>
-        </div>
-      ) : null}
     </div>
   );
 }
@@ -43,18 +28,109 @@ export function AccordionCard({
 export default function Accordions() {
   return (
     <>
-        <div className={"font-medium mt-6 ml-6"}>{"Accordions"}</div>
-        <div className={"grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 p-4"}>
-          <AccordionCard label={"FAQ Accordion"} componentName={"<FAQAccordion />"} shadComponentName="<Accordion />">
-            <FAQAccordionDemo />
-          </AccordionCard>
-          <AccordionCard label={"Process Accordion"} componentName={"<ProcessAccordion />"} shadComponentName="<Accordion />">
-            <ProcessAccordionDemo />
-          </AccordionCard>
-          <AccordionCard label={"Features Accordion"} componentName={"<FeaturesAccordion />"} shadComponentName="<Accordion />">
-            <FeaturesAccordion />
-          </AccordionCard>
+      <div className="flex flex-col gap-y-1 mt-4 ml-6">
+        <h1 className={"text-3xl text-slate-800 font-bold"}>{"Accordions"}</h1>
+        <div className="flex items-center">
+          <a
+            className="flex"
+            href="https://ui.shadcn.com/docs/components/accordion"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Badge className="bg-slate-800">
+              <Image
+                src={shadcn}
+                alt={"Shadcn Logo"}
+                width={16}
+                height={16}
+                className={"rounded-sm object-contain"}
+              />
+              <span className="ml-2 font-normal">{"<Accordion />"}</span>
+              <ExternalLink size={12} className="ml-1.5" />
+            </Badge>
+          </a>
         </div>
-      </>
-  )
+      </div>
+      <div className={"flex flex-col px-6 pt-4"}>
+        <h2 className={"text-xl font-medium text-slate-700"}>
+          {"FAQ Accordion"}
+        </h2>
+        <p className={"text-sm text-gray-500 mb-4 mt-2 w-1/2"}>
+          {
+            "A component that features accordions designed for frequently asked questions, with capabilities for searching and filtering by tags."
+          }
+        </p>
+        <a
+          className="flex mb-4"
+          href="https://github.com/sauren-khosla/abrakadabra-ui/blob/main/app/variants/accordions/faq-accordion.tsx"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Badge className="w-fit flex items-center justify-center">
+            Code
+            <ExternalLink size={12} className="ml-1.5" />
+          </Badge>
+        </a>
+        <AccordionCard
+          label={"FAQ Accordion"}
+          componentName={"<FAQAccordion />"}
+          shadComponentName="<Accordion />"
+        >
+          <FAQAccordionDemo />
+        </AccordionCard>
+        <h2 className={"text-xl font-medium text-slate-700"}>
+          {"Process Accordion"}
+        </h2>
+        <p className={"text-sm text-gray-500 mb-4 mt-2 w-1/2"}>
+          {
+            "A component that displays process steps with a progress bar and expandable descriptions."
+          }
+        </p>
+        <a
+          className="flex mb-4"
+          href="https://github.com/sauren-khosla/abrakadabra-ui/blob/main/app/variants/accordions/process-accordion.tsx"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Badge className="w-fit flex items-center justify-center">
+            Code
+            <ExternalLink size={12} className="ml-1.5" />
+          </Badge>
+        </a>
+        <AccordionCard
+          label={"Process Accordion"}
+          componentName={"<ProcessAccordion />"}
+          shadComponentName="<Accordion />"
+        >
+          <ProcessAccordionDemo />
+        </AccordionCard>
+        <h2 className={"text-xl font-medium text-slate-700"}>
+          {"Features Accordion"}
+        </h2>
+        <p className={"text-sm text-gray-500 mb-4 mt-2 w-1/2"}>
+          {
+            "A component that displays product features in an accordion format, allowing users to expand each feature to view its details."
+          }
+        </p>
+        <a
+          className="flex mb-4"
+          href="https://github.com/sauren-khosla/abrakadabra-ui/blob/main/app/variants/accordions/features-accordion.tsx"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Badge className="w-fit flex items-center justify-center">
+            Code
+            <ExternalLink size={12} className="ml-1.5" />
+          </Badge>
+        </a>
+        <AccordionCard
+          label={"Features Accordion"}
+          componentName={"<FeaturesAccordion />"}
+          shadComponentName="<Accordion />"
+        >
+          <FeaturesAccordion />
+        </AccordionCard>
+      </div>
+    </>
+  );
 }
