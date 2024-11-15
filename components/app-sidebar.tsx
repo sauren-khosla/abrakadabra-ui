@@ -1,4 +1,4 @@
-import { ChevronRight, Split, Sun } from "lucide-react"
+import { ChevronRight, Split, Sun } from "lucide-react";
 
 import {
   Sidebar,
@@ -12,28 +12,32 @@ import {
   SidebarMenuSub,
   SidebarMenuSubButton,
   SidebarMenuSubItem,
-} from "@/components/ui/sidebar"
-import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "./ui/collapsible"
+} from "@/components/ui/sidebar";
+import {
+  Collapsible,
+  CollapsibleContent,
+  CollapsibleTrigger,
+} from "./ui/collapsible";
 
 const items = [
   {
-    title: "Component Variants",
-    url: "/variants",
+    title: "component variants",
+    url: "/component-variants",
     icon: Split,
     subItems: [
-      { title: "Accordions", url: "/variants/accordions" },
-      { title: "Alerts", url: "/variants/alerts" },
-      { title: "Avatars", url: "/variants/avatars" },
-      { title: "Badges", url: "/variants/badges" },
-      { title: "Buttons", url: "/variants/buttons" },
-      { title: "Commands", url: "/variants/commands" },
-      { title: "Inputs", url: "/variants/inputs" },
-      { title: "Menubars", url: "/variants/menubars" },
-      { title: "Progress Bars", url: "/variants/progress-bars" },
-      { title: "Sliders", url: "/variants/sliders" },
+      { title: "accordions", url: "/component-variants/accordions" },
+      { title: "alerts", url: "/component-variants/alerts" },
+      { title: "avatars", url: "/component-variants/avatars" },
+      { title: "badges", url: "/component-variants/badges" },
+      { title: "buttons", url: "/component-variants/buttons" },
+      { title: "commands", url: "/component-variants/commands" },
+      { title: "inputs", url: "/component-variants/inputs" },
+      { title: "menubars", url: "/component-variants/menubars" },
+      { title: "progress bars", url: "/component-variants/progress-bars" },
+      { title: "sliders", url: "/component-variants/sliders" },
     ],
   },
-]
+];
 
 export function AppSidebar() {
   return (
@@ -42,14 +46,16 @@ export function AppSidebar() {
         <SidebarGroup>
           <SidebarGroupLabel className="flex justify-between">
             <span>abrakadabra-ui</span>
-            <button><Sun size={14}/></button>
+            <button>
+              <Sun size={14} />
+            </button>
           </SidebarGroupLabel>
           <SidebarGroupContent>
-          <SidebarMenu className="text-xs">
-            {items.map((item) => (
-                <Collapsible 
-                  defaultOpen 
-                  className="group/collapsible" 
+            <SidebarMenu className="text-xs">
+              {items.map((item) => (
+                <Collapsible
+                  defaultOpen
+                  className="group/collapsible"
                   key={item.title}
                   title={item.title}
                 >
@@ -57,7 +63,7 @@ export function AppSidebar() {
                     <CollapsibleTrigger asChild className="">
                       <SidebarMenuButton asChild>
                         <div className="cursor-pointer select-none">
-                          <item.icon size={24}/>
+                          <item.icon size={24} />
                           <span className="text-sm">{item.title}</span>
                           <ChevronRight className="ml-auto transition-transform group-data-[state=open]/collapsible:rotate-90" />
                         </div>
@@ -65,15 +71,15 @@ export function AppSidebar() {
                     </CollapsibleTrigger>
                     <CollapsibleContent>
                       <SidebarMenuSub>
-                      {item.subItems.map((subItem) => (
-                        <SidebarMenuSubItem key={subItem.title}>
-                          <SidebarMenuSubButton asChild>
-                            <a href={subItem.url}>
-                              <span className="text-sm">{subItem.title}</span>
-                            </a>
-                          </SidebarMenuSubButton>
-                        </SidebarMenuSubItem>
-                      ))}
+                        {item.subItems.map((subItem) => (
+                          <SidebarMenuSubItem key={subItem.title}>
+                            <SidebarMenuSubButton asChild>
+                              <a href={subItem.url}>
+                                <span className="text-sm">{subItem.title}</span>
+                              </a>
+                            </SidebarMenuSubButton>
+                          </SidebarMenuSubItem>
+                        ))}
                       </SidebarMenuSub>
                     </CollapsibleContent>
                   </SidebarMenuItem>
@@ -84,5 +90,5 @@ export function AppSidebar() {
         </SidebarGroup>
       </SidebarContent>
     </Sidebar>
-  )
+  );
 }
