@@ -2,7 +2,7 @@ import { Header } from "@/components/reusable/header";
 import { Card } from "@/components/reusable/card";
 import { RightSidebar } from "@/components/reusable/right-sidebar";
 import { Title } from "@/components/reusable/title";
-import DismissibleAlertDemo from "./dismissable-alert";
+import DismissibleAlertDemo from "./dismissible-alert";
 import TimedAlertDemo from "./timed-alert";
 
 export default function Alerts() {
@@ -25,7 +25,7 @@ export default function Alerts() {
             title="Dismissible Alert"
             id="dismissible-alert"
             description="An alert component that can be dismissed by the user."
-            codeLink="https://github.com/your-repo/alerts/dismissible-alert.tsx"
+            codeLink="https://github.com/sauren-khosla/abrakadabra-ui/blob/main/app/component-variants/alerts/dismissible-alert.tsx"
           />
           <Card className="min-h-48">
             <DismissibleAlertDemo />
@@ -35,7 +35,7 @@ export default function Alerts() {
             title="Timed Alert"
             id="timed-alert"
             description="An alert component that disappears after a set amount of time."
-            codeLink="https://github.com/your-repo/alerts/timed-alert.tsx"
+            codeLink="https://github.com/sauren-khosla/abrakadabra-ui/blob/main/app/component-variants/alerts/timed-alert.tsx"
           />
           <Card>
             <TimedAlertDemo />

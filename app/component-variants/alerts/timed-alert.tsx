@@ -1,18 +1,16 @@
-// TimedAlert.tsx
+"use client";
 
-"use client"
-
-import React, { useEffect, useState } from "react"
-import { Alert, AlertTitle, AlertDescription } from "@/components/ui/alert"
-import { cn } from "@/lib/utils"
+import React, { useEffect, useState } from "react";
+import { Alert, AlertTitle, AlertDescription } from "@/components/ui/alert";
+import { cn } from "@/lib/utils";
 
 interface TimedAlertProps {
-  title: string
-  description: string
-  duration?: number // in milliseconds
-  variant?: "default" | "destructive"
-  dismissible?: boolean
-  repeatDelay?: number // strictly for demo purposes
+  title: string;
+  description: string;
+  duration?: number; // in milliseconds
+  variant?: "default" | "destructive";
+  dismissible?: boolean;
+  repeatDelay?: number; // strictly for demo purposes
 }
 
 export function TimedAlert({
@@ -22,36 +20,36 @@ export function TimedAlert({
   variant = "default",
   repeatDelay = 3000,
 }: TimedAlertProps) {
-  const [isVisible, setIsVisible] = useState(true)
-  const [remainingTime, setRemainingTime] = useState(duration / 1000)
+  const [isVisible, setIsVisible] = useState(true);
+  const [remainingTime, setRemainingTime] = useState(duration / 1000);
 
   useEffect(() => {
     if (isVisible) {
       const hideTimer = setTimeout(() => {
-        setIsVisible(false)
-      }, duration)
+        setIsVisible(false);
+      }, duration);
 
       const interval = setInterval(() => {
-        setRemainingTime((prev) => prev - 1)
-      }, 1000)
+        setRemainingTime((prev) => prev - 1);
+      }, 1000);
 
       return () => {
-        clearTimeout(hideTimer)
-        clearInterval(interval)
-      }
+        clearTimeout(hideTimer);
+        clearInterval(interval);
+      };
     } else {
       // For the demo: timer to make the alert reappear after the specified delay
       const showTimer = setTimeout(() => {
-        setIsVisible(true)
-        setRemainingTime(duration / 1000)
-      }, repeatDelay)
+        setIsVisible(true);
+        setRemainingTime(duration / 1000);
+      }, repeatDelay);
 
       // Clean up timer when the effect cleans up
-      return () => clearTimeout(showTimer)
+      return () => clearTimeout(showTimer);
     }
-  }, [isVisible, duration, repeatDelay])
+  }, [isVisible, duration, repeatDelay]);
 
-  if (!isVisible) return null
+  if (!isVisible) return null;
 
   return (
     <Alert variant={variant} className={cn("flex items-start relative")}>
@@ -63,7 +61,7 @@ export function TimedAlert({
         </AlertDescription>
       </div>
     </Alert>
-  )
+  );
 }
 
 export default function TimedAlertDemo() {
@@ -91,5 +89,5 @@ export default function TimedAlertDemo() {
         repeatDelay={3000}
       />
     </div>
-  )
+  );
 }

@@ -25,7 +25,7 @@ export default function Sliders() {
             title="Icon Slider"
             id="icon-slider"
             description="A slider component that integrates icons to enhance visual feedback and user interaction."
-            codeLink="https://github.com/your-repo/sliders/icon-slider.tsx"
+            codeLink="https://github.com/sauren-khosla/abrakadabra-ui/blob/main/app/component-variants/sliders/icon-slider.tsx"
           />
           <Card className="min-h-16">
             <IconSliderDemo />
@@ -35,7 +35,7 @@ export default function Sliders() {
             title="Tooltip Slider"
             id="tooltip-slider"
             description="A slider component that displays tooltips to provide additional information about the current value."
-            codeLink="https://github.com/your-repo/sliders/tooltip-slider.tsx"
+            codeLink="https://github.com/sauren-khosla/abrakadabra-ui/blob/main/app/component-variants/sliders/tooltip-slider.tsx"
           />
           <Card className="min-h-16">
             <TooltipSliderDemo />

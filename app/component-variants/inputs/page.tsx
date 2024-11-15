@@ -29,7 +29,7 @@ export default function Inputs() {
             title="Password Strength Input"
             id="password-strength-input"
             description="An input component that provides real-time feedback on password strength."
-            codeLink="https://github.com/your-repo/inputs/password-strength-input.tsx"
+            codeLink="https://github.com/sauren-khosla/abrakadabra-ui/blob/main/app/component-variants/inputs/password-strength-input.tsx"
           />
           <Card className="min-h-24">
             <PasswordStrengthInputDemo />
@@ -39,7 +39,7 @@ export default function Inputs() {
             title="Validated Input"
             id="validated-input"
             description="An input component that includes validation logic to ensure correct data entry."
-            codeLink="https://github.com/your-repo/inputs/validated-input.tsx"
+            codeLink="https://github.com/sauren-khosla/abrakadabra-ui/blob/main/app/component-variants/inputs/validated-input.tsx"
           />
           <Card className="min-h-24">
             <ValidatedInputDemo />
@@ -49,7 +49,7 @@ export default function Inputs() {
             title="Validated Input Alt"
             id="validated-input-alt"
             description="An alternative validated input component with enhanced validation features."
-            codeLink="https://github.com/your-repo/inputs/validated-input-alt.tsx"
+            codeLink="https://github.com/sauren-khosla/abrakadabra-ui/blob/main/app/component-variants/inputs/validated-input-alt.tsx"
           />
           <Card className="min-h-24">
             <ValidatedInputAltDemo />
@@ -59,7 +59,7 @@ export default function Inputs() {
             title="Floating Label Input"
             id="floating-label-input"
             description="An input component with a floating label that animates upon focus or input."
-            codeLink="https://github.com/your-repo/inputs/floating-label-input.tsx"
+            codeLink="https://github.com/sauren-khosla/abrakadabra-ui/blob/main/app/component-variants/inputs/floating-label-input.tsx"
           />
           <Card className="min-h-24">
             <FloatingLabelInputDemo />
