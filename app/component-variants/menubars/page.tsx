@@ -1,52 +1,37 @@
-import Image from "next/image";
-import shadcn from "@/public/shadcn.jpeg";
+import { Header } from "@/components/reusable/header";
+import { Card } from "@/components/reusable/card";
+import { RightSidebar } from "@/components/reusable/right-sidebar";
+import { Title } from "@/components/reusable/title";
 import MultiLevelMenubarDemo from "./multi-level-menubar";
 
-export function MenuBarsCard({
-  children,
-  label,
-  componentName,
-  shadComponentName,
-}: {
-  children: React.ReactNode;
-  label: string;
-  componentName: string;
-  shadComponentName?: string;
-}) {
+export default function MenuBars() {
+  const quickLinks = [
+    { href: "#multi-level-menubar", label: "Multi-Level Menubar" },
+  ];
+
   return (
-    <div
-      className={
-        "flex shadow-lg rounded-lg min-h-72 items-center justify-center pb-16 flex-col relative bg-gradient-to-t from-gray-100 to-white border px-6"
-      }
-    >
-      {children}
-      <div className={"absolute bottom-4 left-4 flex flex-col gap-y-1"}>
-        <span className={"font-light text-sm"}>{label}</span>
-        <span className={"font-extralight text-xs text-gray-500"}>{componentName}</span>
-      </div>
-      {shadComponentName ? (
-        <div
-          className={
-            "absolute bottom-4 right-4 bg-gray-50 flex justify-center items-center gap-x-2 text-xs rounded px-2 py-1 shadow-md"
-          }
-        >
-          <Image src={shadcn} alt={"Shadcn Logo"} width={16} height={16} className={"rounded-sm"} />
-          <span>{shadComponentName}</span>
+    <div className="flex min-h-screen">
+      <div className="w-2/3">
+        <Header
+          title="Menu Bars"
+          shadcnLink="https://ui.shadcn.com/docs/components/menubar"
+          shadComponentName="<Menubar />"
+        />
+
+        <div className="flex flex-col px-6 pt-4">
+          <Title
+            title="Multi-Level Menubar"
+            id="multi-level-menubar"
+            description="A menubar component that supports multiple levels of navigation, allowing for complex menu structures."
+            codeLink="https://github.com/your-repo/menu-bars/multi-level-menubar.tsx"
+          />
+          <Card className="min-h-24">
+            <MultiLevelMenubarDemo />
+          </Card>
         </div>
-      ) : null}
+      </div>
+
+      <RightSidebar links={quickLinks} />
     </div>
   );
-}
-
-export default function MenuBars() {
-  return (
-    <>
-      <div className={"font-medium mt-4 ml-6"}>{"Menubars"}</div>
-      <div className={"grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 p-4"}>
-        <MenuBarsCard label={"Multi-Level Menubar"} componentName={"<MultiLevelMenubar />"} shadComponentName="<Menubar />">
-          <MultiLevelMenubarDemo />
-        </MenuBarsCard>
-      </div>
-    </>
-  )
 }

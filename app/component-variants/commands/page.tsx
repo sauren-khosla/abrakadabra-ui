@@ -1,56 +1,49 @@
-import Image from "next/image";
-import shadcn from "@/public/shadcn.jpeg";
+import { Header } from "@/components/reusable/header";
+import { Card } from "@/components/reusable/card";
+import { RightSidebar } from "@/components/reusable/right-sidebar";
+import { Title } from "@/components/reusable/title";
 import RecentsCommandDemo from "./recents-command";
 import CategoriesCommandDemo from "./categories-command";
 
-export function CommandsCard({
-  children,
-  label,
-  componentName,
-  shadComponentName,
-}: {
-  children: React.ReactNode;
-  label: string;
-  componentName: string;
-  shadComponentName?: string;
-}) {
+export default function Commands() {
+  const quickLinks = [
+    { href: "#recents-command", label: "Recents Command" },
+    { href: "#categories-command", label: "Categories Command" },
+  ];
+
   return (
-    <div
-      className={
-        "flex shadow-lg rounded-lg min-h-36 items-center justify-center pb-16 flex-col relative bg-gradient-to-t from-gray-100 to-white border px-6"
-      }
-    >
-      {children}
-      <div className={"absolute bottom-4 left-4 flex flex-col gap-y-1"}>
-        <span className={"font-light text-sm"}>{label}</span>
-        <span className={"font-extralight text-xs text-gray-500"}>{componentName}</span>
-      </div>
-      {shadComponentName ? (
-        <div
-          className={
-            "absolute bottom-4 right-4 bg-gray-50 flex justify-center items-center gap-x-2 text-xs rounded px-2 py-1 shadow-md"
-          }
-        >
-          <Image src={shadcn} alt={"Shadcn Logo"} width={16} height={16} className={"rounded-sm"} />
-          <span>{shadComponentName}</span>
+    <div className="flex min-h-screen">
+      <div className="w-2/3">
+        <Header
+          title="Commands"
+          shadcnLink="https://ui.shadcn.com/docs/components/command"
+          shadComponentName="<Command />"
+        />
+
+        <div className="flex flex-col px-6 pt-4">
+          <Title
+            title="Recents Command"
+            id="recents-command"
+            description="A command component that displays recently used commands for quick access."
+            codeLink="https://github.com/your-repo/commands/recents-command.tsx"
+          />
+          <Card className="min-h-14">
+            <RecentsCommandDemo />
+          </Card>
+
+          <Title
+            title="Categories Command"
+            id="categories-command"
+            description="A command component organized into categories, allowing users to navigate and select commands efficiently."
+            codeLink="https://github.com/your-repo/commands/categories-command.tsx"
+          />
+          <Card className="min-h-14">
+            <CategoriesCommandDemo />
+          </Card>
         </div>
-      ) : null}
+      </div>
+
+      <RightSidebar links={quickLinks} />
     </div>
   );
-}
-
-export default function Commands() {
-  return (
-    <>
-      <div className={"font-medium mt-4 ml-6"}>{"Commands"}</div>
-      <div className={"grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 p-4"}>
-        <CommandsCard label={"Recents Command"} componentName={"<RecentsCommand />"} shadComponentName="<Command />">
-          <RecentsCommandDemo />
-        </CommandsCard>
-        <CommandsCard label={"Categories Command"} componentName={"<CategoriesCommand />"} shadComponentName="<Command />">
-          <CategoriesCommandDemo />
-        </CommandsCard>
-      </div>
-    </>
-  )
 }

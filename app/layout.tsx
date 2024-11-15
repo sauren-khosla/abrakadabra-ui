@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
-import { AppSidebar } from "@/components/app-sidebar";
+import { AppSidebar } from "@/components/organizational/app-sidebar";
 import { Bricolage_Grotesque } from "next/font/google";
 import "./globals.css";
 import { Separator } from "@/components/ui/separator";
-import BreadcrumbClient from "@/components/BreadCrumbClient";
+import BreadcrumbClient from "@/components/organizational/breadcrumb-client";
 
 const bricolage = Bricolage_Grotesque({ subsets: ["latin"] });
 

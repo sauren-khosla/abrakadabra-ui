@@ -1,56 +1,49 @@
-import Image from "next/image";
-import shadcn from "@/public/shadcn.jpeg";
+import { Header } from "@/components/reusable/header";
+import { Card } from "@/components/reusable/card";
+import { RightSidebar } from "@/components/reusable/right-sidebar";
+import { Title } from "@/components/reusable/title";
 import DismissibleAlertDemo from "./dismissable-alert";
 import TimedAlertDemo from "./timed-alert";
 
-export function AlertCard({
-  children,
-  label,
-  componentName,
-  shadComponentName,
-}: {
-  children: React.ReactNode;
-  label: string;
-  componentName: string;
-  shadComponentName?: string;
-}) {
+export default function Alerts() {
+  const quickLinks = [
+    { href: "#dismissible-alert", label: "Dismissible Alert" },
+    { href: "#timed-alert", label: "Timed Alert" },
+  ];
+
   return (
-    <div
-      className={
-        "flex shadow-lg rounded-lg min-h-96 pb-20 pt-2 items-center flex-col relative bg-gradient-to-t from-gray-100 to-white border px-6"
-      }
-    >
-      {children}
-      <div className={"absolute bottom-4 left-4 flex flex-col gap-y-1"}>
-        <span className={"font-light text-sm"}>{label}</span>
-        <span className={"font-extralight text-xs text-gray-500"}>{componentName}</span>
-      </div>
-      {shadComponentName ? (
-        <div
-          className={
-            "absolute bottom-4 right-4 bg-gray-50 flex justify-center items-center gap-x-2 text-xs rounded px-2 py-1 shadow-md"
-          }
-        >
-          <Image src={shadcn} alt={"Shadcn Logo"} width={16} height={16} className={"rounded-sm"} />
-          <span>{shadComponentName}</span>
+    <div className="flex min-h-screen">
+      <div className="w-2/3">
+        <Header
+          title="Alerts"
+          shadcnLink="https://ui.shadcn.com/docs/components/alert"
+          shadComponentName="<Alert />"
+        />
+
+        <div className="flex flex-col px-6 pt-4">
+          <Title
+            title="Dismissible Alert"
+            id="dismissible-alert"
+            description="An alert component that can be dismissed by the user."
+            codeLink="https://github.com/your-repo/alerts/dismissible-alert.tsx"
+          />
+          <Card className="min-h-48">
+            <DismissibleAlertDemo />
+          </Card>
+
+          <Title
+            title="Timed Alert"
+            id="timed-alert"
+            description="An alert component that disappears after a set amount of time."
+            codeLink="https://github.com/your-repo/alerts/timed-alert.tsx"
+          />
+          <Card>
+            <TimedAlertDemo />
+          </Card>
         </div>
-      ) : null}
+      </div>
+
+      <RightSidebar links={quickLinks} />
     </div>
   );
-}
-
-export default function Alerts() {
-  return (
-    <>
-      <div className={"font-medium mt-4 ml-6"}>{"Alerts"}</div>
-      <div className={"grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 p-4"}>
-        <AlertCard label={"Dismissable Alert"} componentName={"<DismissableAlert />"} shadComponentName="<Alert />">
-          <DismissibleAlertDemo />
-        </AlertCard>
-        <AlertCard label={"Timed Alert"} componentName={"<TimedAlert />"} shadComponentName="<Alert />">
-          <TimedAlertDemo />
-        </AlertCard>
-      </div>
-    </>
-  )
 }

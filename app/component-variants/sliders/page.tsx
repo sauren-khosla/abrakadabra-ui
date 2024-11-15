@@ -1,56 +1,49 @@
-import Image from "next/image";
-import shadcn from "@/public/shadcn.jpeg";
+import { Header } from "@/components/reusable/header";
+import { Card } from "@/components/reusable/card";
+import { RightSidebar } from "@/components/reusable/right-sidebar";
+import { Title } from "@/components/reusable/title";
 import IconSliderDemo from "./icon-slider";
 import TooltipSliderDemo from "./tooltip-slider";
 
-export function SlidersCard({
-  children,
-  label,
-  componentName,
-  shadComponentName,
-}: {
-  children: React.ReactNode;
-  label: string;
-  componentName: string;
-  shadComponentName?: string;
-}) {
+export default function Sliders() {
+  const quickLinks = [
+    { href: "#icon-slider", label: "Icon Slider" },
+    { href: "#tooltip-slider", label: "Tooltip Slider" },
+  ];
+
   return (
-    <div
-      className={
-        "flex shadow-lg rounded-lg min-h-72 items-center justify-center pb-6 flex-col relative bg-gradient-to-t from-gray-100 to-white border px-6"
-      }
-    >
-      {children}
-      <div className={"absolute bottom-4 left-4 flex flex-col gap-y-1"}>
-        <span className={"font-light text-sm"}>{label}</span>
-        <span className={"font-extralight text-xs text-gray-500"}>{componentName}</span>
-      </div>
-      {shadComponentName ? (
-        <div
-          className={
-            "absolute bottom-4 right-4 bg-gray-50 flex justify-center items-center gap-x-2 text-xs rounded px-2 py-1 shadow-md"
-          }
-        >
-          <Image src={shadcn} alt={"Shadcn Logo"} width={16} height={16} className={"rounded-sm"} />
-          <span>{shadComponentName}</span>
+    <div className="flex min-h-screen">
+      <div className="w-2/3">
+        <Header
+          title="Sliders"
+          shadcnLink="https://ui.shadcn.com/docs/components/slider"
+          shadComponentName="<Slider />"
+        />
+
+        <div className="flex flex-col px-6 pt-4">
+          <Title
+            title="Icon Slider"
+            id="icon-slider"
+            description="A slider component that integrates icons to enhance visual feedback and user interaction."
+            codeLink="https://github.com/your-repo/sliders/icon-slider.tsx"
+          />
+          <Card className="min-h-16">
+            <IconSliderDemo />
+          </Card>
+
+          <Title
+            title="Tooltip Slider"
+            id="tooltip-slider"
+            description="A slider component that displays tooltips to provide additional information about the current value."
+            codeLink="https://github.com/your-repo/sliders/tooltip-slider.tsx"
+          />
+          <Card className="min-h-16">
+            <TooltipSliderDemo />
+          </Card>
         </div>
-      ) : null}
+      </div>
+
+      <RightSidebar links={quickLinks} />
     </div>
   );
-}
-
-export default function Sliders() {
-  return (
-    <>
-      <div className={"font-medium mt-4 ml-6"}>{"Sliders"}</div>
-      <div className={"grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 p-4"}>
-        <SlidersCard label={"Icon Slider"} componentName={"<IconSlider />"} shadComponentName="<Slider />">
-          <IconSliderDemo />
-        </SlidersCard>
-        <SlidersCard label={"Tooltip Slider"} componentName={"<TooltipSlider />"} shadComponentName="<Slider />">
-          <TooltipSliderDemo />
-        </SlidersCard>
-      </div>
-    </>
-  )
 }

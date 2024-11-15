@@ -1,64 +1,73 @@
-import Image from "next/image";
-import shadcn from "@/public/shadcn.jpeg";
+import { Header } from "@/components/reusable/header";
+import { Card } from "@/components/reusable/card";
+import { RightSidebar } from "@/components/reusable/right-sidebar";
+import { Title } from "@/components/reusable/title";
 import PasswordStrengthInputDemo from "./password-strength-input";
 import ValidatedInputDemo from "./validated-input";
 import FloatingLabelInputDemo from "./floating-label-input";
 import ValidatedInputAltDemo from "./validated-input-alt";
 
-export function InputsCard({
-  children,
-  label,
-  componentName,
-  shadComponentName,
-}: {
-  children: React.ReactNode;
-  label: string;
-  componentName: string;
-  shadComponentName?: string;
-}) {
+export default function Inputs() {
+  const quickLinks = [
+    { href: "#password-strength-input", label: "Password Strength Input" },
+    { href: "#validated-input", label: "Validated Input" },
+    { href: "#validated-input-alt", label: "Validated Input Alt" },
+    { href: "#floating-label-input", label: "Floating Label Input" },
+  ];
+
   return (
-    <div
-      className={
-        "flex shadow-lg rounded-lg min-h-72 items-center justify-center pb-16 flex-col relative bg-gradient-to-t from-gray-100 to-white border px-6"
-      }
-    >
-      {children}
-      <div className={"absolute bottom-4 left-4 flex flex-col gap-y-1"}>
-        <span className={"font-light text-sm"}>{label}</span>
-        <span className={"font-extralight text-xs text-gray-500"}>{componentName}</span>
-      </div>
-      {shadComponentName ? (
-        <div
-          className={
-            "absolute bottom-4 right-4 bg-gray-50 flex justify-center items-center gap-x-2 text-xs rounded px-2 py-1 shadow-md"
-          }
-        >
-          <Image src={shadcn} alt={"Shadcn Logo"} width={16} height={16} className={"rounded-sm"} />
-          <span>{shadComponentName}</span>
+    <div className="flex min-h-screen">
+      <div className="w-2/3">
+        <Header
+          title="Inputs"
+          shadcnLink="https://ui.shadcn.com/docs/components/input"
+          shadComponentName="<Input />"
+        />
+
+        <div className="flex flex-col px-6 pt-4">
+          <Title
+            title="Password Strength Input"
+            id="password-strength-input"
+            description="An input component that provides real-time feedback on password strength."
+            codeLink="https://github.com/your-repo/inputs/password-strength-input.tsx"
+          />
+          <Card className="min-h-24">
+            <PasswordStrengthInputDemo />
+          </Card>
+
+          <Title
+            title="Validated Input"
+            id="validated-input"
+            description="An input component that includes validation logic to ensure correct data entry."
+            codeLink="https://github.com/your-repo/inputs/validated-input.tsx"
+          />
+          <Card className="min-h-24">
+            <ValidatedInputDemo />
+          </Card>
+
+          <Title
+            title="Validated Input Alt"
+            id="validated-input-alt"
+            description="An alternative validated input component with enhanced validation features."
+            codeLink="https://github.com/your-repo/inputs/validated-input-alt.tsx"
+          />
+          <Card className="min-h-24">
+            <ValidatedInputAltDemo />
+          </Card>
+
+          <Title
+            title="Floating Label Input"
+            id="floating-label-input"
+            description="An input component with a floating label that animates upon focus or input."
+            codeLink="https://github.com/your-repo/inputs/floating-label-input.tsx"
+          />
+          <Card className="min-h-24">
+            <FloatingLabelInputDemo />
+          </Card>
         </div>
-      ) : null}
+      </div>
+
+      <RightSidebar links={quickLinks} />
     </div>
   );
-}
-
-export default function Inputs() {
-  return (
-    <>
-      <div className={"font-medium mt-4 ml-6"}>{"Inputs"}</div>
-      <div className={"grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 p-4"}>
-        <InputsCard label={"Password Strength Input"} componentName={"<PasswordStrengthInput />"} shadComponentName="<Input />">
-          <PasswordStrengthInputDemo />
-        </InputsCard>
-        <InputsCard label={"Validated Input"} componentName={"<ValidatedInput />"} shadComponentName="<Input />">
-          <ValidatedInputDemo />
-        </InputsCard>
-        <InputsCard label={"Validated Input Alt"} componentName={"<ValidatedInputAlt />"} shadComponentName="<Input />">
-          <ValidatedInputAltDemo />
-        </InputsCard>
-        <InputsCard label={"Floating Label Input"} componentName={"<FloatingLabelInput />"} shadComponentName="<Input />">
-          <FloatingLabelInputDemo />
-        </InputsCard>
-      </div>
-    </>
-  )
 }

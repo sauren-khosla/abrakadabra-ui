@@ -1,60 +1,61 @@
-import Image from "next/image";
-import shadcn from "@/public/shadcn.jpeg";
+import { Header } from "@/components/reusable/header";
+import { Title } from "@/components/reusable/title";
+import { Card } from "@/components/reusable/card";
+import { RightSidebar } from "@/components/reusable/right-sidebar";
 import StatusAvatarDemo from "./status-avatar";
 import GroupAvatarDemo from "./group-avatar";
 import DropdownAvatarDemo from "./dropdown-avatar";
 
-export function AvatarCard({
-  children,
-  label,
-  componentName,
-  shadComponentName,
-}: {
-  children: React.ReactNode;
-  label: string;
-  componentName: string;
-  shadComponentName?: string;
-}) {
+export default function Avatars() {
+  const quickLinks = [
+    { href: "#status-avatar", label: "Status Avatar" },
+    { href: "#group-avatar", label: "Group Avatar" },
+    { href: "#dropdown-avatar", label: "Dropdown Avatar" },
+  ];
+
   return (
-    <div
-      className={
-        "flex shadow-lg rounded-lg min-h-44 items-center justify-center pt-2 pb-12 flex-col relative bg-gradient-to-t from-gray-100 to-white border px-6"
-      }
-    >
-      {children}
-      <div className={"absolute bottom-4 left-4 flex flex-col gap-y-1"}>
-        <span className={"font-light text-sm"}>{label}</span>
-        <span className={"font-extralight text-xs text-gray-500"}>{componentName}</span>
-      </div>
-      {shadComponentName ? (
-        <div
-          className={
-            "absolute bottom-4 right-4 bg-gray-50 flex justify-center items-center gap-x-2 text-xs rounded px-2 py-1 shadow-md"
-          }
-        >
-          <Image src={shadcn} alt={"Shadcn Logo"} width={16} height={16} className={"rounded-sm"} />
-          <span>{shadComponentName}</span>
+    <div className="flex min-h-screen">
+      <div className="w-2/3">
+        <Header
+          title="Avatars"
+          shadcnLink="https://ui.shadcn.com/docs/components/avatar"
+          shadComponentName="<Avatar />"
+        />
+
+        <div className="flex flex-col px-6 pt-4">
+          <Title
+            title="Status Avatar"
+            id="status-avatar"
+            description="An avatar component that displays a user's profile picture with an online/offline status indicator."
+            codeLink="https://github.com/sauren-khosla/abrakadabra-ui/blob/main/app/component-variants/avatars/status-avatar.tsx"
+          />
+          <Card className="min-h-24">
+            <StatusAvatarDemo />
+          </Card>
+
+          <Title
+            title="Group Avatar"
+            id="group-avatar"
+            description="An avatar component that displays a group of users in a stacked or clustered format."
+            codeLink="https://github.com/sauren-khosla/abrakadabra-ui/blob/main/app/component-variants/avatars/group-avatar.tsx"
+          />
+          <Card className="min-h-48">
+            <GroupAvatarDemo />
+          </Card>
+
+          <Title
+            title="Dropdown Avatar"
+            id="dropdown-avatar"
+            description="An avatar component with a dropdown menu for user settings or profile actions."
+            codeLink="https://github.com/sauren-khosla/abrakadabra-ui/blob/main/app/component-variants/avatars/dropdown-avatar.tsx"
+          />
+          <Card className="min-h-36">
+            <DropdownAvatarDemo />
+          </Card>
         </div>
-      ) : null}
+      </div>
+
+      <RightSidebar links={quickLinks} />
     </div>
   );
-}
-
-export default function Avatars() {
-  return (
-    <>
-      <div className={"font-medium mt-4 ml-6"}>{"Avatars"}</div>
-      <div className={"grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 p-4"}>
-        <AvatarCard label={"Status Avatar"} componentName={"<StatusAvatar />"} shadComponentName="<Avatar />">
-          <StatusAvatarDemo />
-        </AvatarCard>
-        <AvatarCard label={"Group Avatar"} componentName={"<GroupAvatar />"} shadComponentName="<Avatar />">
-          <GroupAvatarDemo />
-        </AvatarCard>
-        <AvatarCard label={"Dropdown Avatar"} componentName={"<DropdownAvatar />"} shadComponentName="<Avatar />">
-          <DropdownAvatarDemo />
-        </AvatarCard>
-      </div>
-    </>
-  )
 }

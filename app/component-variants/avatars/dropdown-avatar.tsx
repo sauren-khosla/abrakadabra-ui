@@ -1,6 +1,6 @@
-"use client"
+"use client";
 
-import React from "react"
+import React from "react";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -8,34 +8,36 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu"
-import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar"
-import { SettingsIcon, LogOutIcon, UserIcon } from "lucide-react"
-import { cn } from "@/lib/utils"
+} from "@/components/ui/dropdown-menu";
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
+import { SettingsIcon, LogOutIcon, UserIcon, HelpCircle } from "lucide-react";
+import { cn } from "@/lib/utils";
 
 interface AvatarDropdownProps {
-  src?: string
-  alt?: string
-  fallback?: string
-  size?: "small" | "medium" | "large"
+  src?: string;
+  alt?: string;
+  fallback?: string;
+  size?: "small" | "medium" | "large";
 }
 
 const sizeClasses: Record<NonNullable<AvatarDropdownProps["size"]>, string> = {
   small: "h-8 w-8",
   medium: "h-10 w-10",
   large: "h-14 w-14",
-}
+};
 
 export function AvatarDropdown({
   src,
   alt,
   fallback,
-  size = "medium"
+  size = "medium",
 }: AvatarDropdownProps) {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <div className={cn("inline-block", sizeClasses[size], "cursor-pointer")}>
+        <div
+          className={cn("inline-block", sizeClasses[size], "cursor-pointer")}
+        >
           <Avatar>
             {src ? (
               <AvatarImage src={src} alt={alt} />
@@ -60,6 +62,12 @@ export function AvatarDropdown({
             Settings
           </div>
         </DropdownMenuItem>
+        <DropdownMenuItem asChild className="cursor-pointer">
+          <div className="flex items-center w-full">
+            <HelpCircle className="mr-2 h-4 w-4" />
+            Help
+          </div>
+        </DropdownMenuItem>
         <DropdownMenuSeparator />
         <DropdownMenuItem asChild className="flex items-center cursor-pointer">
           <div className="flex items-center w-full">
@@ -69,7 +77,7 @@ export function AvatarDropdown({
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
-  )
+  );
 }
 
 export default function AvatarDropdownDemo() {
@@ -81,5 +89,5 @@ export default function AvatarDropdownDemo() {
         size="medium"
       />
     </div>
-  )
+  );
 }

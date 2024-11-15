@@ -1,61 +1,61 @@
-import Image from "next/image";
-import shadcn from "@/public/shadcn.jpeg";
+import { Header } from "@/components/reusable/header";
+import { Title } from "@/components/reusable/title";
+import { Card } from "@/components/reusable/card";
+import { RightSidebar } from "@/components/reusable/right-sidebar";
 import IconBadgeDemo from "./icon-badge";
 import GroupBadgeDemo from "./group-badge";
 import CloseBadgeDemo from "./close-badge";
 
+export default function Badges() {
+  const quickLinks = [
+    { href: "#icon-badge", label: "Icon Badge" },
+    { href: "#group-badge", label: "Group Badge" },
+    { href: "#close-badge", label: "Close Badge" },
+  ];
 
-export function BadgesCard({
-  children,
-  label,
-  componentName,
-  shadComponentName,
-}: {
-  children: React.ReactNode;
-  label: string;
-  componentName: string;
-  shadComponentName?: string;
-}) {
   return (
-    <div
-      className={
-        "flex shadow-lg rounded-lg min-h-72 items-center justify-center pb-16 flex-col relative bg-gradient-to-t from-gray-100 to-white border px-6"
-      }
-    >
-      {children}
-      <div className={"absolute bottom-4 left-4 flex flex-col gap-y-1"}>
-        <span className={"font-light text-sm"}>{label}</span>
-        <span className={"font-extralight text-xs text-gray-500"}>{componentName}</span>
-      </div>
-      {shadComponentName ? (
-        <div
-          className={
-            "absolute bottom-4 right-4 bg-gray-50 flex justify-center items-center gap-x-2 text-xs rounded px-2 py-1 shadow-md"
-          }
-        >
-          <Image src={shadcn} alt={"Shadcn Logo"} width={16} height={16} className={"rounded-sm"} />
-          <span>{shadComponentName}</span>
+    <div className="flex min-h-screen">
+      <div className="w-2/3">
+        <Header
+          title="Badges"
+          shadcnLink="https://ui.shadcn.com/docs/components/badge"
+          shadComponentName="<Badge />"
+        />
+
+        <div className="flex flex-col px-6 pt-4">
+          <Title
+            title="Icon Badge"
+            id="icon-badge"
+            description="A badge component that includes an icon alongside text."
+            codeLink="https://github.com/sauren-khosla/abrakadabra-ui/blob/main/app/component-variants/badges/icon-badge.tsx"
+          />
+          <Card className="min-h-24">
+            <IconBadgeDemo />
+          </Card>
+
+          <Title
+            title="Group Badge"
+            id="group-badge"
+            description="A badge component that displays a group of badges together."
+            codeLink="https://github.com/sauren-khosla/abrakadabra-ui/blob/main/app/component-variants/badges/group-badge.tsx"
+          />
+          <Card className="min-h-28">
+            <GroupBadgeDemo />
+          </Card>
+
+          <Title
+            title="Close Badge"
+            id="close-badge"
+            description="A badge component with a close or remove icon."
+            codeLink="https://github.com/sauren-khosla/abrakadabra-ui/blob/main/app/component-variants/badges/close-badge.tsx"
+          />
+          <Card className="min-h-24">
+            <CloseBadgeDemo />
+          </Card>
         </div>
-      ) : null}
+      </div>
+
+      <RightSidebar links={quickLinks} />
     </div>
   );
-}
-
-export default function Badges() {
-  return (
-    <>
-      <div className={"font-medium mt-4 ml-6"}>{"Badges"}</div>
-      <div className={"grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 p-4"}>
-        <BadgesCard label={"Icon Badge"} componentName={"<IconBadge />"} shadComponentName="<Badge />">
-          <IconBadgeDemo />
-        </BadgesCard>
-        <BadgesCard label={"Group Badge"} componentName={"<GroupBadge />"} shadComponentName="<Badge />">
-          <GroupBadgeDemo />
-        </BadgesCard>
-        <BadgesCard label={"Close Badge"} componentName={"<CloseBadge />"} shadComponentName="<Badge />">
-          <CloseBadgeDemo />
-        </BadgesCard>
-      </div>
-    </>
-  )
 }

@@ -1,76 +1,88 @@
-import Image from "next/image";
-import shadcn from "@/public/shadcn.jpeg";
+import { Header } from "@/components/reusable/header";
+import { Card } from "@/components/reusable/card";
+import { RightSidebar } from "@/components/reusable/right-sidebar";
+import { Title } from "@/components/reusable/title";
 import BatteryProgressDemo from "./battery-progress";
 import ProgressCircleWithIconDemo from "./circle-icon-progress";
 import CircularProgressDemo from "./circular-progress";
 import FloatingLabelProgressDemo from "./floating-label-progress";
 import SegmentedProgressDemo from "./segmented-progress";
 
-export function ProgressCard({
-  children,
-  label,
-  componentName,
-  shadComponentName,
-}: {
-  children: React.ReactNode;
-  label: string;
-  componentName: string;
-  shadComponentName?: string;
-}) {
+export default function ProgressBars() {
+  const quickLinks = [
+    { href: "#battery-progress", label: "Battery Progress" },
+    { href: "#circle-with-icon", label: "Circle with Icon" },
+    { href: "#circular", label: "Circular" },
+    { href: "#floating-label", label: "Floating Label" },
+    { href: "#segmented", label: "Segmented" },
+  ];
+
   return (
-    <div
-      className={
-        "flex shadow-lg rounded-lg min-h-72 justify-center items-center flex-col relative bg-gradient-to-t from-gray-100 to-white pb-6 border"
-      }
-    >
-      {children}
-      <div className={"absolute bottom-4 left-4 flex flex-col gap-y-1"}>
-        <span className={"font-light text-sm"}>{label}</span>
-        <span className={"font-extralight text-xs text-gray-500"}>{componentName}</span>
-      </div>
-      {shadComponentName ? (
-        <div
-          className={
-            "absolute bottom-4 right-4 bg-gray-50 flex justify-center items-center gap-x-2 text-xs rounded px-2 py-1 shadow-md"
-          }
-        >
-          <Image src={shadcn} alt={"Shadcn Logo"} width={16} height={16} className={"rounded-sm"} />
-          <span>{shadComponentName}</span>
+    <div className="flex min-h-screen">
+      <div className="w-2/3">
+        <Header
+          title="Progress Indicators"
+          shadcnLink="https://ui.shadcn.com/docs/components/progress"
+          shadComponentName="<Progress />"
+        />
+
+        <div className="flex flex-col px-6 pt-4">
+          <Title
+            title="Battery Progress"
+            id="battery-progress"
+            description="A progress indicator that visually represents battery levels, mimicking a battery's charge state."
+            codeLink="https://github.com/your-repo/progress-bars/battery-progress.tsx"
+          />
+          <Card className="min-h-32">
+            <BatteryProgressDemo />
+          </Card>
+
+          <Title
+            title="Circle with Icon"
+            id="circle-with-icon"
+            description="A circular progress indicator that integrates an icon at its center, enhancing visual feedback."
+            codeLink="https://github.com/your-repo/progress-bars/circle-icon-progress.tsx"
+            notShadcn={true}
+          />
+          <Card className="min-h-24">
+            <ProgressCircleWithIconDemo />
+          </Card>
+
+          <Title
+            title="Circular"
+            id="circular"
+            description="A standard circular progress indicator, ideal for representing ongoing processes."
+            codeLink="https://github.com/your-repo/progress-bars/circular-progress.tsx"
+            notShadcn={true}
+          />
+          <Card className="min-h-24">
+            <CircularProgressDemo />
+          </Card>
+
+          <Title
+            title="Floating Label"
+            id="floating-label"
+            description="A progress indicator with a floating label that displays dynamic progress values."
+            codeLink="https://github.com/your-repo/progress-bars/floating-label-progress.tsx"
+          />
+          <Card className="min-h-20">
+            <FloatingLabelProgressDemo />
+          </Card>
+
+          <Title
+            title="Segmented"
+            id="segmented"
+            description="A segmented progress indicator that breaks down progress into distinct, labeled segments."
+            codeLink="https://github.com/your-repo/progress-bars/segmented-progress.tsx"
+            notShadcn={true}
+          />
+          <Card className="min-h-16">
+            <SegmentedProgressDemo />
+          </Card>
         </div>
-      ) : null}
+      </div>
+
+      <RightSidebar links={quickLinks} />
     </div>
   );
 }
-
-export default function ProgressBars() {
-  return (
-      <>
-        <div className={"font-medium mt-4 ml-6"}>{"Progress Indicators"}</div>
-        <div className={"grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 p-4"}>
-          <ProgressCard
-            label={"Battery Progress"}
-            componentName={"<BatteryProgress />"}
-            shadComponentName={"<Progress />"}
-          >
-            <BatteryProgressDemo />
-          </ProgressCard>
-          <ProgressCard label={"Circle with Icon"} componentName={"<ProgressCircleWithImage />"}>
-            <ProgressCircleWithIconDemo />
-          </ProgressCard>
-          <ProgressCard label={"Circular"} componentName={"<CircularProgress />"}>
-            <CircularProgressDemo />
-          </ProgressCard>
-          <ProgressCard
-            label={"Floating Label"}
-            componentName={"<FloatingLabelProgress />"}
-            shadComponentName={"<Progress />"}
-          >
-            <FloatingLabelProgressDemo />
-          </ProgressCard>
-          <ProgressCard label={"Segmented"} componentName={"<SegmentedProgress />"}>
-            <SegmentedProgressDemo />
-          </ProgressCard>
-        </div>
-      </>
-  );
-};
