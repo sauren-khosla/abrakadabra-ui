@@ -1,5 +1,5 @@
 import { Header } from "@/components/reusable/header";
-import { Card } from "@/components/reusable/card";
+import { ComponentCard } from "@/components/reusable/component-card";
 import { RightSidebar } from "@/components/reusable/right-sidebar";
 import FAQAccordionDemo from "./faq-accordion";
 import ProcessAccordionDemo from "./process-accordion";
@@ -28,27 +28,27 @@ export default function Accordions() {
             description="A component that features accordions designed for frequently asked questions, with capabilities for searching and filtering by tags."
             codeLink="https://github.com/sauren-khosla/abrakadabra-ui/blob/main/app/component-variants/accordions/faq-accordion.tsx"
           />
-          <Card>
+          <ComponentCard>
             <FAQAccordionDemo />
-          </Card>
+          </ComponentCard>
           <Title
             title="Process Accordion"
             id="process-accordion"
             description="A component that displays process steps with a progress bar and expandable descriptions."
             codeLink="https://github.com/sauren-khosla/abrakadabra-ui/blob/main/app/component-variants/accordions/process-accordion.tsx"
           />
-          <Card>
+          <ComponentCard>
             <ProcessAccordionDemo />
-          </Card>
+          </ComponentCard>
           <Title
             title="Features Accordion"
             id="features-accordion"
             description="A component that displays product features in an accordion format, allowing users to expand each feature to view its details."
             codeLink="https://github.com/sauren-khosla/abrakadabra-ui/blob/main/app/component-variants/accordions/features-accordion.tsx"
           />
-          <Card>
+          <ComponentCard>
             <FeaturesAccordion />
-          </Card>
+          </ComponentCard>
         </div>
       </div>
       <RightSidebar links={quickLinks} />

@@ -1,5 +1,5 @@
 import { Header } from "@/components/reusable/header";
-import { Card } from "@/components/reusable/card";
+import { ComponentCard } from "@/components/reusable/component-card";
 import { RightSidebar } from "@/components/reusable/right-sidebar";
 import { Title } from "@/components/reusable/title";
 import RecentsCommandDemo from "./recents-command";
@@ -27,9 +27,9 @@ export default function Commands() {
             description="A command component that displays recently used commands for quick access."
             codeLink="https://github.com/sauren-khosla/abrakadabra-ui/blob/main/app/component-variants/commands/recents-command.tsx"
           />
-          <Card>
+          <ComponentCard>
             <RecentsCommandDemo />
-          </Card>
+          </ComponentCard>
 
           <Title
             title="Categories Command"
@@ -37,9 +37,9 @@ export default function Commands() {
             description="A command component organized into categories, allowing users to navigate and select commands efficiently."
             codeLink="https://github.com/sauren-khosla/abrakadabra-ui/blob/main/app/component-variants/commands/categories-command.tsx"
           />
-          <Card>
+          <ComponentCard>
             <CategoriesCommandDemo />
-          </Card>
+          </ComponentCard>
         </div>
       </div>
 

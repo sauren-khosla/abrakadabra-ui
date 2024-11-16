@@ -1,5 +1,5 @@
 import { Header } from "@/components/reusable/header";
-import { Card } from "@/components/reusable/card";
+import { ComponentCard } from "@/components/reusable/component-card";
 import { RightSidebar } from "@/components/reusable/right-sidebar";
 import { Title } from "@/components/reusable/title";
 import SplitButtonDemo from "./split-button";
@@ -27,9 +27,9 @@ export default function Buttons() {
             description="A button component that combines a primary action with a dropdown for additional actions."
             codeLink="https://github.com/sauren-khosla/abrakadabra-ui/blob/main/app/component-variants/buttons/split-button.tsx"
           />
-          <Card>
+          <ComponentCard>
             <SplitButtonDemo />
-          </Card>
+          </ComponentCard>
 
           <Title
             title="Badge Button"
@@ -37,9 +37,9 @@ export default function Buttons() {
             description="A button component that includes a badge to display notifications or counts."
             codeLink="https://github.com/sauren-khosla/abrakadabra-ui/blob/main/app/component-variants/buttons/badge-button.tsx"
           />
-          <Card>
+          <ComponentCard>
             <BadgeButtonDemo />
-          </Card>
+          </ComponentCard>
         </div>
       </div>
 

@@ -1,5 +1,5 @@
 import { Header } from "@/components/reusable/header";
-import { Card } from "@/components/reusable/card";
+import { ComponentCard } from "@/components/reusable/component-card";
 import { RightSidebar } from "@/components/reusable/right-sidebar";
 import { Title } from "@/components/reusable/title";
 import PasswordStrengthInputDemo from "./password-strength-input";
@@ -31,9 +31,9 @@ export default function Inputs() {
             description="An input component that provides real-time feedback on password strength."
             codeLink="https://github.com/sauren-khosla/abrakadabra-ui/blob/main/app/component-variants/inputs/password-strength-input.tsx"
           />
-          <Card>
+          <ComponentCard>
             <PasswordStrengthInputDemo />
-          </Card>
+          </ComponentCard>
 
           <Title
             title="Validated Input"
@@ -41,9 +41,9 @@ export default function Inputs() {
             description="An input component that includes validation logic to ensure correct data entry."
             codeLink="https://github.com/sauren-khosla/abrakadabra-ui/blob/main/app/component-variants/inputs/validated-input.tsx"
           />
-          <Card>
+          <ComponentCard>
             <ValidatedInputDemo />
-          </Card>
+          </ComponentCard>
 
           <Title
             title="Validated Input Alt"
@@ -51,9 +51,9 @@ export default function Inputs() {
             description="An alternative validated input component with enhanced validation features."
             codeLink="https://github.com/sauren-khosla/abrakadabra-ui/blob/main/app/component-variants/inputs/validated-input-alt.tsx"
           />
-          <Card>
+          <ComponentCard>
             <ValidatedInputAltDemo />
-          </Card>
+          </ComponentCard>
 
           <Title
             title="Floating Label Input"
@@ -61,9 +61,9 @@ export default function Inputs() {
             description="An input component with a floating label that animates upon focus or input."
             codeLink="https://github.com/sauren-khosla/abrakadabra-ui/blob/main/app/component-variants/inputs/floating-label-input.tsx"
           />
-          <Card>
+          <ComponentCard>
             <FloatingLabelInputDemo />
-          </Card>
+          </ComponentCard>
         </div>
       </div>
 

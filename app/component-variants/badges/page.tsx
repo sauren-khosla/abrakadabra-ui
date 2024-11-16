@@ -1,6 +1,6 @@
 import { Header } from "@/components/reusable/header";
 import { Title } from "@/components/reusable/title";
-import { Card } from "@/components/reusable/card";
+import { ComponentCard } from "@/components/reusable/component-card";
 import { RightSidebar } from "@/components/reusable/right-sidebar";
 import IconBadgeDemo from "./icon-badge";
 import GroupBadgeDemo from "./group-badge";
@@ -29,9 +29,9 @@ export default function Badges() {
             description="A badge component that includes an icon alongside text."
             codeLink="https://github.com/sauren-khosla/abrakadabra-ui/blob/main/app/component-variants/badges/icon-badge.tsx"
           />
-          <Card>
+          <ComponentCard>
             <IconBadgeDemo />
-          </Card>
+          </ComponentCard>
 
           <Title
             title="Group Badge"
@@ -39,9 +39,9 @@ export default function Badges() {
             description="A badge component that displays a group of badges together."
             codeLink="https://github.com/sauren-khosla/abrakadabra-ui/blob/main/app/component-variants/badges/group-badge.tsx"
           />
-          <Card>
+          <ComponentCard>
             <GroupBadgeDemo />
-          </Card>
+          </ComponentCard>
 
           <Title
             title="Close Badge"
@@ -49,9 +49,9 @@ export default function Badges() {
             description="A badge component with a close or remove icon."
             codeLink="https://github.com/sauren-khosla/abrakadabra-ui/blob/main/app/component-variants/badges/close-badge.tsx"
           />
-          <Card>
+          <ComponentCard>
             <CloseBadgeDemo />
-          </Card>
+          </ComponentCard>
         </div>
       </div>
 

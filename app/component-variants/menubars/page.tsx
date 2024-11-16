@@ -1,5 +1,5 @@
 import { Header } from "@/components/reusable/header";
-import { Card } from "@/components/reusable/card";
+import { ComponentCard } from "@/components/reusable/component-card";
 import { RightSidebar } from "@/components/reusable/right-sidebar";
 import { Title } from "@/components/reusable/title";
 import MultiLevelMenubarDemo from "./multi-level-menubar";
@@ -25,9 +25,9 @@ export default function MenuBars() {
             description="A menubar component that supports multiple levels of navigation, allowing for complex menu structures."
             codeLink="https://github.com/sauren-khosla/abrakadabra-ui/blob/main/app/component-variants/menu-bars/multi-level-menubar.tsx"
           />
-          <Card>
+          <ComponentCard>
             <MultiLevelMenubarDemo />
-          </Card>
+          </ComponentCard>
         </div>
       </div>
 

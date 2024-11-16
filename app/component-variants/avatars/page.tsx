@@ -1,6 +1,6 @@
 import { Header } from "@/components/reusable/header";
 import { Title } from "@/components/reusable/title";
-import { Card } from "@/components/reusable/card";
+import { ComponentCard } from "@/components/reusable/component-card";
 import { RightSidebar } from "@/components/reusable/right-sidebar";
 import StatusAvatarDemo from "./status-avatar";
 import GroupAvatarDemo from "./group-avatar";
@@ -29,9 +29,9 @@ export default function Avatars() {
             description="An avatar component that displays a user's profile picture with an online/offline status indicator."
             codeLink="https://github.com/sauren-khosla/abrakadabra-ui/blob/main/app/component-variants/avatars/status-avatar.tsx"
           />
-          <Card>
+          <ComponentCard>
             <StatusAvatarDemo />
-          </Card>
+          </ComponentCard>
 
           <Title
             title="Dropdown Avatar"
@@ -39,9 +39,9 @@ export default function Avatars() {
             description="An avatar component with a dropdown menu for user settings or profile actions."
             codeLink="https://github.com/sauren-khosla/abrakadabra-ui/blob/main/app/component-variants/avatars/dropdown-avatar.tsx"
           />
-          <Card className="">
+          <ComponentCard className="">
             <DropdownAvatarDemo />
-          </Card>
+          </ComponentCard>
 
           <Title
             title="Group Avatar"
@@ -49,9 +49,9 @@ export default function Avatars() {
             description="An avatar component that displays a group of users in a stacked or clustered format."
             codeLink="https://github.com/sauren-khosla/abrakadabra-ui/blob/main/app/component-variants/avatars/group-avatar.tsx"
           />
-          <Card>
+          <ComponentCard>
             <GroupAvatarDemo />
-          </Card>
+          </ComponentCard>
         </div>
       </div>
 

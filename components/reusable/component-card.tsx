@@ -1,6 +1,6 @@
 import clsx from "clsx";
 
-export function Card({
+export function ComponentCard({
   children,
   className = "",
 }: {

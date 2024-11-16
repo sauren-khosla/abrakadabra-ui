@@ -1,5 +1,5 @@
 import { Header } from "@/components/reusable/header";
-import { Card } from "@/components/reusable/card";
+import { ComponentCard } from "@/components/reusable/component-card";
 import { RightSidebar } from "@/components/reusable/right-sidebar";
 import { Title } from "@/components/reusable/title";
 import IconSliderDemo from "./icon-slider";
@@ -27,9 +27,9 @@ export default function Sliders() {
             description="A slider component that integrates icons to enhance visual feedback and user interaction."
             codeLink="https://github.com/sauren-khosla/abrakadabra-ui/blob/main/app/component-variants/sliders/icon-slider.tsx"
           />
-          <Card className="min-h-16">
+          <ComponentCard className="min-h-16">
             <IconSliderDemo />
-          </Card>
+          </ComponentCard>
 
           <Title
             title="Tooltip Slider"
@@ -37,9 +37,9 @@ export default function Sliders() {
             description="A slider component that displays tooltips to provide additional information about the current value."
             codeLink="https://github.com/sauren-khosla/abrakadabra-ui/blob/main/app/component-variants/sliders/tooltip-slider.tsx"
           />
-          <Card className="min-h-16">
+          <ComponentCard className="min-h-16">
             <TooltipSliderDemo />
-          </Card>
+          </ComponentCard>
         </div>
       </div>
 

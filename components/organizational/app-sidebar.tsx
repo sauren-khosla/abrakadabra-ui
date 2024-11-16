@@ -1,4 +1,4 @@
-import { ChevronRight, Split, Sun } from "lucide-react";
+import { BringToFront, ChevronRight, Split, Sun } from "lucide-react";
 
 import {
   Sidebar,
@@ -35,6 +35,14 @@ const items = [
       { title: "menubars", url: "/component-variants/menubars" },
       { title: "progress bars", url: "/component-variants/progress-bars" },
       { title: "sliders", url: "/component-variants/sliders" },
+    ],
+  },
+  {
+    title: "animated icons",
+    url: "/animated-icons",
+    icon: BringToFront,
+    subItems: [
+      { title: "communication", url: "/animated-icons/communication" },
     ],
   },
 ];
