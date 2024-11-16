@@ -19,6 +19,8 @@ import {
   CollapsibleTrigger,
 } from "../ui/collapsible";
 
+import Link from "next/link";
+
 const items = [
   {
     title: "component variants",
@@ -82,9 +84,9 @@ export function AppSidebar() {
                         {item.subItems.map((subItem) => (
                           <SidebarMenuSubItem key={subItem.title}>
                             <SidebarMenuSubButton asChild>
-                              <a href={subItem.url}>
+                              <Link href={subItem.url}>
                                 <span className="text-sm">{subItem.title}</span>
-                              </a>
+                              </Link>
                             </SidebarMenuSubButton>
                           </SidebarMenuSubItem>
                         ))}
