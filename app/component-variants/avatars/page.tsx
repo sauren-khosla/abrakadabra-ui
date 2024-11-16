@@ -9,8 +9,8 @@ import DropdownAvatarDemo from "./dropdown-avatar";
 export default function Avatars() {
   const quickLinks = [
     { href: "#status-avatar", label: "Status Avatar" },
-    { href: "#group-avatar", label: "Group Avatar" },
     { href: "#dropdown-avatar", label: "Dropdown Avatar" },
+    { href: "#group-avatar", label: "Group Avatar" },
   ];
 
   return (
@@ -29,18 +29,8 @@ export default function Avatars() {
             description="An avatar component that displays a user's profile picture with an online/offline status indicator."
             codeLink="https://github.com/sauren-khosla/abrakadabra-ui/blob/main/app/component-variants/avatars/status-avatar.tsx"
           />
-          <Card className="min-h-24">
+          <Card>
             <StatusAvatarDemo />
-          </Card>
-
-          <Title
-            title="Group Avatar"
-            id="group-avatar"
-            description="An avatar component that displays a group of users in a stacked or clustered format."
-            codeLink="https://github.com/sauren-khosla/abrakadabra-ui/blob/main/app/component-variants/avatars/group-avatar.tsx"
-          />
-          <Card className="min-h-48">
-            <GroupAvatarDemo />
           </Card>
 
           <Title
@@ -49,8 +39,18 @@ export default function Avatars() {
             description="An avatar component with a dropdown menu for user settings or profile actions."
             codeLink="https://github.com/sauren-khosla/abrakadabra-ui/blob/main/app/component-variants/avatars/dropdown-avatar.tsx"
           />
-          <Card className="min-h-36">
+          <Card className="">
             <DropdownAvatarDemo />
+          </Card>
+
+          <Title
+            title="Group Avatar"
+            id="group-avatar"
+            description="An avatar component that displays a group of users in a stacked or clustered format."
+            codeLink="https://github.com/sauren-khosla/abrakadabra-ui/blob/main/app/component-variants/avatars/group-avatar.tsx"
+          />
+          <Card>
+            <GroupAvatarDemo />
           </Card>
         </div>
       </div>

@@ -27,7 +27,7 @@ export default function Alerts() {
             description="An alert component that can be dismissed by the user."
             codeLink="https://github.com/sauren-khosla/abrakadabra-ui/blob/main/app/component-variants/alerts/dismissible-alert.tsx"
           />
-          <Card className="min-h-48">
+          <Card>
             <DismissibleAlertDemo />
           </Card>
 

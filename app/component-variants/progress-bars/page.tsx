@@ -33,7 +33,7 @@ export default function ProgressBars() {
             description="A progress indicator that visually represents battery levels, mimicking a battery's charge state."
             codeLink="https://github.com/sauren-khosla/abrakadabra-ui/blob/main/app/component-variants/progress-bars/battery-progress.tsx"
           />
-          <Card className="min-h-32">
+          <Card>
             <BatteryProgressDemo />
           </Card>
 
@@ -44,7 +44,7 @@ export default function ProgressBars() {
             codeLink="https://github.com/sauren-khosla/abrakadabra-ui/blob/main/app/component-variants/progress-bars/circle-icon-progress.tsx"
             notShadcn={true}
           />
-          <Card className="min-h-24">
+          <Card>
             <ProgressCircleWithIconDemo />
           </Card>
 
@@ -55,7 +55,7 @@ export default function ProgressBars() {
             codeLink="https://github.com/sauren-khosla/abrakadabra-ui/blob/main/app/component-variants/progress-bars/circular-progress.tsx"
             notShadcn={true}
           />
-          <Card className="min-h-24">
+          <Card>
             <CircularProgressDemo />
           </Card>
 
@@ -65,7 +65,7 @@ export default function ProgressBars() {
             description="A progress indicator with a floating label that displays dynamic progress values."
             codeLink="https://github.com/sauren-khosla/abrakadabra-ui/blob/main/app/component-variants/progress-bars/floating-label-progress.tsx"
           />
-          <Card className="min-h-20">
+          <Card>
             <FloatingLabelProgressDemo />
           </Card>
 
@@ -76,7 +76,7 @@ export default function ProgressBars() {
             codeLink="https://github.com/sauren-khosla/abrakadabra-ui/blob/main/app/component-variants/progress-bars/segmented-progress.tsx"
             notShadcn={true}
           />
-          <Card className="min-h-16">
+          <Card>
             <SegmentedProgressDemo />
           </Card>
         </div>

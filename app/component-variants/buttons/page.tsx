@@ -27,7 +27,7 @@ export default function Buttons() {
             description="A button component that combines a primary action with a dropdown for additional actions."
             codeLink="https://github.com/sauren-khosla/abrakadabra-ui/blob/main/app/component-variants/buttons/split-button.tsx"
           />
-          <Card className="min-h-32">
+          <Card>
             <SplitButtonDemo />
           </Card>
 
@@ -37,7 +37,7 @@ export default function Buttons() {
             description="A button component that includes a badge to display notifications or counts."
             codeLink="https://github.com/sauren-khosla/abrakadabra-ui/blob/main/app/component-variants/buttons/badge-button.tsx"
           />
-          <Card className="min-h-32">
+          <Card>
             <BadgeButtonDemo />
           </Card>
         </div>

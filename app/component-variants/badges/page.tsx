@@ -29,7 +29,7 @@ export default function Badges() {
             description="A badge component that includes an icon alongside text."
             codeLink="https://github.com/sauren-khosla/abrakadabra-ui/blob/main/app/component-variants/badges/icon-badge.tsx"
           />
-          <Card className="min-h-24">
+          <Card>
             <IconBadgeDemo />
           </Card>
 
@@ -39,7 +39,7 @@ export default function Badges() {
             description="A badge component that displays a group of badges together."
             codeLink="https://github.com/sauren-khosla/abrakadabra-ui/blob/main/app/component-variants/badges/group-badge.tsx"
           />
-          <Card className="min-h-28">
+          <Card>
             <GroupBadgeDemo />
           </Card>
 
@@ -49,7 +49,7 @@ export default function Badges() {
             description="A badge component with a close or remove icon."
             codeLink="https://github.com/sauren-khosla/abrakadabra-ui/blob/main/app/component-variants/badges/close-badge.tsx"
           />
-          <Card className="min-h-24">
+          <Card>
             <CloseBadgeDemo />
           </Card>
         </div>

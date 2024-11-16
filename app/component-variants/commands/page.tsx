@@ -27,7 +27,7 @@ export default function Commands() {
             description="A command component that displays recently used commands for quick access."
             codeLink="https://github.com/sauren-khosla/abrakadabra-ui/blob/main/app/component-variants/commands/recents-command.tsx"
           />
-          <Card className="min-h-14">
+          <Card>
             <RecentsCommandDemo />
           </Card>
 
@@ -37,7 +37,7 @@ export default function Commands() {
             description="A command component organized into categories, allowing users to navigate and select commands efficiently."
             codeLink="https://github.com/sauren-khosla/abrakadabra-ui/blob/main/app/component-variants/commands/categories-command.tsx"
           />
-          <Card className="min-h-14">
+          <Card>
             <CategoriesCommandDemo />
           </Card>
         </div>

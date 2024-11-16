@@ -25,7 +25,7 @@ export default function MenuBars() {
             description="A menubar component that supports multiple levels of navigation, allowing for complex menu structures."
             codeLink="https://github.com/sauren-khosla/abrakadabra-ui/blob/main/app/component-variants/menu-bars/multi-level-menubar.tsx"
           />
-          <Card className="min-h-24">
+          <Card>
             <MultiLevelMenubarDemo />
           </Card>
         </div>

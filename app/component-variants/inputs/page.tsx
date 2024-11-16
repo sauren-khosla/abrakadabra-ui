@@ -31,7 +31,7 @@ export default function Inputs() {
             description="An input component that provides real-time feedback on password strength."
             codeLink="https://github.com/sauren-khosla/abrakadabra-ui/blob/main/app/component-variants/inputs/password-strength-input.tsx"
           />
-          <Card className="min-h-24">
+          <Card>
             <PasswordStrengthInputDemo />
           </Card>
 
@@ -41,7 +41,7 @@ export default function Inputs() {
             description="An input component that includes validation logic to ensure correct data entry."
             codeLink="https://github.com/sauren-khosla/abrakadabra-ui/blob/main/app/component-variants/inputs/validated-input.tsx"
           />
-          <Card className="min-h-24">
+          <Card>
             <ValidatedInputDemo />
           </Card>
 
@@ -51,7 +51,7 @@ export default function Inputs() {
             description="An alternative validated input component with enhanced validation features."
             codeLink="https://github.com/sauren-khosla/abrakadabra-ui/blob/main/app/component-variants/inputs/validated-input-alt.tsx"
           />
-          <Card className="min-h-24">
+          <Card>
             <ValidatedInputAltDemo />
           </Card>
 
@@ -61,7 +61,7 @@ export default function Inputs() {
             description="An input component with a floating label that animates upon focus or input."
             codeLink="https://github.com/sauren-khosla/abrakadabra-ui/blob/main/app/component-variants/inputs/floating-label-input.tsx"
           />
-          <Card className="min-h-24">
+          <Card>
             <FloatingLabelInputDemo />
           </Card>
         </div>
