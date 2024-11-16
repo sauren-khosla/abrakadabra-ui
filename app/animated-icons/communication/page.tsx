@@ -1,6 +1,7 @@
 import { Header } from "@/components/reusable/header";
 import { LinkedInIcon } from "./linkedin";
 import { XIcon } from "./x";
+import { MetaIcon } from "./meta";
 import { IconCard } from "@/components/reusable/icon-card";
 
 export default function SocialIcons() {
@@ -11,6 +12,7 @@ export default function SocialIcons() {
         <div className="grid grid-cols-5 gap-4 items-center justify-items-center px-8 py-2 mt-4">
           <IconCard icon={<LinkedInIcon />} iconName="LinkedIn" />
           <IconCard icon={<XIcon />} iconName="X" />
+          <IconCard icon={<MetaIcon />} iconName="Meta" />
         </div>
       </div>
     </div>
