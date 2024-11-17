@@ -4,6 +4,8 @@ import { XIcon } from "./social/x";
 import { MetaIcon } from "./social/meta";
 import { InstagramIcon } from "./social/instagram";
 import { TwitchIcon } from "./social/twitch";
+import { DiscordIcon } from "./social/discord";
+import { YouTubeIcon } from "./social/youtube";
 import { IconCard } from "@/components/reusable/icon-card";
 
 export default function SocialIcons() {
@@ -17,6 +19,8 @@ export default function SocialIcons() {
           <IconCard icon={<MetaIcon />} iconName="Meta" />
           <IconCard icon={<InstagramIcon />} iconName="Instagram" />
           <IconCard icon={<TwitchIcon />} iconName="Twitch" />
+          <IconCard icon={<DiscordIcon />} iconName="Discord" />
+          <IconCard icon={<YouTubeIcon />} iconName="Youtube" />
         </div>
       </div>
     </div>
