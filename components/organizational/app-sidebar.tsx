@@ -1,4 +1,4 @@
-import { BringToFront, ChevronRight, Split, Sun } from "lucide-react";
+import { Boxes, BringToFront, ChevronRight, Sun } from "lucide-react";
 
 import {
   Sidebar,
@@ -25,7 +25,7 @@ const items = [
   {
     title: "component variants",
     url: "/component-variants",
-    icon: Split,
+    icon: Boxes,
     subItems: [
       { title: "accordions", url: "/component-variants/accordions" },
       { title: "alerts", url: "/component-variants/alerts" },
@@ -37,14 +37,6 @@ const items = [
       { title: "menubars", url: "/component-variants/menubars" },
       { title: "progress bars", url: "/component-variants/progress-bars" },
       { title: "sliders", url: "/component-variants/sliders" },
-    ],
-  },
-  {
-    title: "animated icons",
-    url: "/animated-icons",
-    icon: BringToFront,
-    subItems: [
-      { title: "communication", url: "/animated-icons/communication" },
     ],
   },
 ];
@@ -95,6 +87,17 @@ export function AppSidebar() {
                   </SidebarMenuItem>
                 </Collapsible>
               ))}
+              <SidebarMenuItem>
+                <SidebarMenuButton asChild>
+                  <Link
+                    href={`/animated-icons`}
+                    className="cursor-pointer select-none"
+                  >
+                    <BringToFront size={24} />
+                    <span className="text-sm">{`animated icons`}</span>
+                  </Link>
+                </SidebarMenuButton>
+              </SidebarMenuItem>
             </SidebarMenu>
           </SidebarGroupContent>
         </SidebarGroup>

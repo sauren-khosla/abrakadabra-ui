@@ -31,7 +31,7 @@ const LinkedInIcon = () => {
         height="32"
         viewBox="0 -5 24 29"
         fill="none"
-        stroke="currentColor"
+        stroke="#0077B5"
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
