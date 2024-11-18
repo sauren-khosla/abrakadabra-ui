@@ -6,43 +6,44 @@ import React from "react";
 const DiscordIcon = () => {
   const controls = useAnimation();
 
-  const rotateAnimation = async () => {
+  const animateIcon = async () => {
     // Rotate to the left
     await controls.start({
-      rotate: -30,
+      rotate: 30,
       scale: 1.05,
       transition: { duration: 0.25, ease: "easeInOut" },
     });
 
     // Rotate back to center
     await controls.start({
-      rotate: 45,
+      rotate: -45,
       scale: 1.1,
       transition: { duration: 0.25, ease: "easeInOut" },
     });
 
     // Rotate back to center
     await controls.start({
-      rotate: -360,
+      rotate: 360,
       scale: 1.15,
       transition: { duration: 0.6, ease: "easeInOut" },
     });
 
+    // Reduce size back to normal
     await controls.start({
       scale: 1,
       transition: { duration: 0.3, ease: "easeInOut" },
     });
   };
 
-  const resetRotation = async () => {
+  const resetAnimation = async () => {
     await controls.set({ rotate: 0, scale: 1 });
   };
 
   return (
     <div
       className="cursor-pointer select-none p-2 hover:bg-accent rounded-md transition-colors duration-200 flex items-center justify-center"
-      onMouseEnter={rotateAnimation}
-      onMouseLeave={resetRotation}
+      onMouseEnter={animateIcon}
+      onMouseLeave={resetAnimation}
     >
       <motion.svg
         xmlns="http://www.w3.org/2000/svg"

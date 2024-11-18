@@ -4,9 +4,6 @@ import { motion, useAnimation, Variants } from "framer-motion";
 import React from "react";
 
 const circleVariants: Variants = {
-  normal: {
-    y: 0,
-  },
   animate: {
     y: [0, -5, 1, 0],
     transition: {
@@ -23,7 +20,6 @@ const LinkedInIcon = () => {
     <div
       className="cursor-pointer select-none p-2 hover:bg-accent rounded-md transition-colors duration-200 flex items-center justify-center"
       onMouseEnter={() => controls.start("animate")}
-      onMouseLeave={() => controls.start("normal")}
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"

@@ -14,16 +14,10 @@ const XIcon = () => {
     });
   };
 
-  const resetPath = async () => {
-    await controls.stop();
-    await controls.set({ pathLength: 1 });
-  };
-
   return (
     <div
       className="cursor-pointer select-none p-2 hover:bg-accent rounded-md transition-colors duration-200 flex items-center justify-center"
       onMouseEnter={animatePath}
-      onMouseLeave={resetPath}
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
