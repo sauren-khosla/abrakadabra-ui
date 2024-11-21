@@ -9,6 +9,7 @@ import { YouTubeIcon } from "./social/youtube";
 import { RedditIcon } from "./social/reddit";
 import { TikTokIcon } from "./social/tiktok";
 import { SpotifyIcon } from "./social/spotify";
+import { GithubIcon } from "./social/github";
 import { IconCard } from "@/components/reusable/icon-card";
 
 export default function SocialIcons() {
@@ -27,6 +28,7 @@ export default function SocialIcons() {
           <IconCard icon={<RedditIcon />} iconName="Reddit" />
           <IconCard icon={<TikTokIcon />} iconName="TikTok" />
           <IconCard icon={<SpotifyIcon />} iconName="Spotify" />
+          <IconCard icon={<GithubIcon />} iconName="Github" />
         </div>
       </div>
     </div>
