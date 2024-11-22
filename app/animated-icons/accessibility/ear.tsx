@@ -21,7 +21,7 @@ const EarIcon = () => {
         arc1Controls
           .start({
             opacity: 1,
-            transition: { duration: 0.2, ease: "easeInOut" },
+            transition: { duration: 0.5, ease: "easeInOut" },
           })
           .then(() =>
             arc1Controls.start({
@@ -45,7 +45,7 @@ const EarIcon = () => {
         arc3Controls
           .start({
             opacity: 1,
-            transition: { duration: 0.5, ease: "easeInOut" },
+            transition: { duration: 0.2, ease: "easeInOut" },
           })
           .then(() =>
             arc3Controls.start({
@@ -89,19 +89,19 @@ const EarIcon = () => {
         <path d="M6 8.5a6.5 6.5 0 1 1 13 0c0 6-6 6-6 10a3.5 3.5 0 1 1-7 0" />
         <path d="M15 8.5a2.5 2.5 0 0 0-5 0v1a2 2 0 1 1 0 4" />
         <motion.path
-          d="M23 8.5a6.5 6.5 0 0 1 0 7"
+          d="M23 15.5a7.5 7.5 0 0 1 0 -7"
           strokeWidth={1}
           initial={{ pathLength: 1, opacity: 0 }}
           animate={arc1Controls}
         />
         <motion.path
-          d="M25 8a7 7 0 0 1 0 8"
+          d="M26 16a7 7 0 0 1 0 -8"
           strokeWidth={1}
           initial={{ pathLength: 1, opacity: 0 }}
           animate={arc2Controls}
         />
         <motion.path
-          d="M27 7.5a7.5 7.5 0 0 1 0 9"
+          d="M29 16.5a6.5 6.5 0 0 1 0 -9"
           strokeWidth={1}
           initial={{ pathLength: 1, opacity: 0 }}
           animate={arc3Controls}
