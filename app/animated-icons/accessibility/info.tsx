@@ -37,7 +37,6 @@ const InfoIcon = () => {
   };
 
   const resetAnimation = async () => {
-    // Reset the circle and dot to their original state
     await Promise.all([
       circleControls.start({
         pathLength: 1,
@@ -70,7 +69,6 @@ const InfoIcon = () => {
         strokeLinejoin="round"
         className="lucide lucide-info"
       >
-        {/* Animated Circle */}
         <motion.circle
           cx="12"
           cy="12"
@@ -79,7 +77,6 @@ const InfoIcon = () => {
           initial={{ pathLength: 1, opacity: 1 }}
         />
 
-        {/* Static Vertical Line */}
         <motion.path
           d="M12 16v-4"
           stroke="currentColor"
@@ -88,7 +85,6 @@ const InfoIcon = () => {
           strokeLinejoin="round"
         />
 
-        {/* Animated Top Dot */}
         <motion.path
           d="M12 8h.01"
           animate={dotControls}

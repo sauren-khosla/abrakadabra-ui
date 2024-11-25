@@ -83,7 +83,7 @@ export function IconCard({
             </div>
           ))}
         </div>
-        <div className="text-xs text-slate-800 w-16 self-center items-center text-center flex justify-center">
+        <div className="text-[10px] text-slate-800 w-16 self-center items-center text-center flex justify-center">
           {iconName}
         </div>
         {/* Dots */}

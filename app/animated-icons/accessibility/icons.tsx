@@ -7,6 +7,9 @@ import { EyeOffIcon } from "./eye-off";
 import { InfoIcon } from "./info";
 import { MoonIcon } from "./moon";
 import { ScanEyeIcon } from "./eye-scan";
+import { ScanSearchIcon } from "./search-scan";
+import { SunAppearIcon } from "./sun-appear";
+import { SunShortenIcon } from "./sun-shorten";
 
 export function AccessibilityIcons() {
   return (
@@ -24,7 +27,16 @@ export function AccessibilityIcons() {
       />
       <IconCard icon={<InfoIcon />} iconName="Info" />
       <IconCard icon={<MoonIcon />} iconName="Moon" />
-      <IconCard icon={<ScanEyeIcon />} iconName="Eye Scan" />
+      <IconCard icon={<ScanEyeIcon />} iconName="Scan Eye" />
+      <IconCard icon={<ScanSearchIcon />} iconName="Scan Search" />
+      <IconCard
+        icon={<SunAppearIcon />}
+        icons={[
+          <SunAppearIcon key="sun-appear" />,
+          <SunShortenIcon key="sun-shorten" />,
+        ]}
+        iconName="Sun"
+      />
     </div>
   );
 }

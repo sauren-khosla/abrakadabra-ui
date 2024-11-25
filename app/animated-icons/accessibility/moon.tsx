@@ -58,7 +58,6 @@ const MoonIcon = () => {
       onMouseEnter={animateSparkles}
       onMouseLeave={resetSparkles}
     >
-      {/* Moon SVG */}
       <motion.svg
         xmlns="http://www.w3.org/2000/svg"
         width="24"
