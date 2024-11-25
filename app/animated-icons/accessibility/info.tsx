@@ -3,21 +3,19 @@
 import { motion, useAnimation } from "framer-motion";
 import React from "react";
 
-const CircleHelpIcon = () => {
-  const questionMarkControls = useAnimation();
+const InfoIcon = () => {
+  const circleControls = useAnimation();
   const dotControls = useAnimation();
 
   const animateIcon = async () => {
     await Promise.all([
-      questionMarkControls.set({
+      circleControls.set({
         pathLength: 0,
         opacity: 0,
       }),
-
       dotControls.set({
         opacity: 0,
         scale: 0,
-        pathLength: 0,
       }),
     ]);
 
@@ -25,36 +23,30 @@ const CircleHelpIcon = () => {
       opacity: 0,
     });
 
-    await questionMarkControls.start({
+    await circleControls.start({
       pathLength: 1,
       opacity: 1,
-      transition: { duration: 0.5, ease: "easeInOut" },
+      transition: { duration: 1, ease: "easeInOut" },
     });
 
     await dotControls.start({
       opacity: 1,
-      pathLength: 1,
-      scale: 1.5,
-      transition: { duration: 0.5, ease: "easeInOut" },
-    });
-
-    await dotControls.start({
-      opacity: 1,
-      scale: 1,
-      transition: { duration: 0.8, ease: "easeInOut" },
+      scale: [0, 1.6, 1],
+      transition: { duration: 0.6, ease: "easeInOut" },
     });
   };
 
   const resetAnimation = async () => {
+    // Reset the circle and dot to their original state
     await Promise.all([
-      questionMarkControls.start({
+      circleControls.start({
         pathLength: 1,
         opacity: 1,
         transition: { duration: 0.5, ease: "easeInOut" },
       }),
       dotControls.start({
         opacity: 1,
-        pathLength: 1,
+        scale: 1,
         transition: { duration: 0.5, ease: "easeInOut" },
       }),
     ]);
@@ -68,30 +60,44 @@ const CircleHelpIcon = () => {
     >
       <motion.svg
         xmlns="http://www.w3.org/2000/svg"
-        width="28"
-        height="28"
+        width="24"
+        height="24"
         viewBox="0 0 24 24"
         fill="none"
         stroke="currentColor"
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
-        className="lucide lucide-circle-help"
+        className="lucide lucide-info"
       >
-        <circle cx="12" cy="12" r="10" />
-        <motion.path
-          d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"
-          animate={questionMarkControls}
+        {/* Animated Circle */}
+        <motion.circle
+          cx="12"
+          cy="12"
+          r="10"
+          animate={circleControls}
           initial={{ pathLength: 1, opacity: 1 }}
         />
+
+        {/* Static Vertical Line */}
         <motion.path
-          d="M12 17h.01"
+          d="M12 16v-4"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+
+        {/* Animated Top Dot */}
+        <motion.path
+          d="M12 8h.01"
           animate={dotControls}
-          initial={{ opacity: 1, pathLength: 1 }}
+          initial={{ opacity: 1, scale: 1 }}
+          style={{ transformOrigin: "12px 8px" }}
         />
       </motion.svg>
     </div>
   );
 };
 
-export { CircleHelpIcon };
+export { InfoIcon };
