@@ -10,6 +10,8 @@ import { ScanEyeIcon } from "./eye-scan";
 import { ScanSearchIcon } from "./search-scan";
 import { SunAppearIcon } from "./sun-appear";
 import { SunShortenIcon } from "./sun-shorten";
+import { ZoomInIcon } from "./zoom-in";
+import { ZoomOutIcon } from "./zoom-out";
 
 export function AccessibilityIcons() {
   return (
@@ -37,6 +39,8 @@ export function AccessibilityIcons() {
         ]}
         iconName="Sun"
       />
+      <IconCard icon={<ZoomInIcon />} iconName="Zoom In" />
+      <IconCard icon={<ZoomOutIcon />} iconName="Zoom Out" />
     </div>
   );
 }

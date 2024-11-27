@@ -1,5 +1,6 @@
 import { SocialIcons } from "./social/icons";
 import { AccessibilityIcons } from "./accessibility/icons";
+import { AccountIcons } from "./account/icons";
 
 export default function IconCategories() {
   return (
@@ -13,6 +14,10 @@ export default function IconCategories() {
           <div>
             <div className="text-2xl font-bold px-4">Accessibility</div>
             <AccessibilityIcons />
+          </div>
+          <div>
+            <div className="text-2xl font-bold px-4">Account</div>
+            <AccountIcons />
           </div>
         </div>
       </div>
