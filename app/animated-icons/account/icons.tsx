@@ -7,6 +7,7 @@ import { BookmarkIcon } from "./bookmark";
 import { BookmarkCheckIcon } from "./bookmark-check";
 import { CircleUserIcon } from "./circle-user";
 import { CogIcon } from "./cog";
+import { FingerprintIcon } from "./fingerprint";
 
 export function AccountIcons() {
   return (
@@ -19,6 +20,7 @@ export function AccountIcons() {
       <IconCard icon={<BookmarkCheckIcon />} iconName="Bookmark Check" />
       <IconCard icon={<CircleUserIcon />} iconName="Circle User" />
       <IconCard icon={<CogIcon />} iconName="Cog" />
+      <IconCard icon={<FingerprintIcon />} iconName="Fingerprint" />
     </div>
   );
 }
