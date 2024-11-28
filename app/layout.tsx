@@ -6,7 +6,7 @@ import "./globals.css";
 import { Separator } from "@/components/ui/separator";
 import BreadcrumbClient from "@/components/organizational/breadcrumb-client";
 
-const bricolage = Bricolage_Grotesque({ subsets: ["latin"] });
+const bricolage = Bricolage_Grotesque({ subsets: ["latin"], display: "swap" });
 
 export const metadata: Metadata = {
   title: "Create Next App",
