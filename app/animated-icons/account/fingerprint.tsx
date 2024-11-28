@@ -10,7 +10,7 @@ const FingerprintIcon = () => {
     iconControls.set({
       pathLength: 1,
     });
-  }, []);
+  });
 
   const animateMovement = async () => {
     await iconControls.set({

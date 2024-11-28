@@ -13,7 +13,7 @@ const CircleHelpIcon = () => {
       scale: 1,
       pathLength: 1,
     });
-  }, []);
+  });
 
   const animateIcon = async () => {
     await Promise.all([

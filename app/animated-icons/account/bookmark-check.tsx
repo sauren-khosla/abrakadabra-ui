@@ -9,7 +9,7 @@ const BookmarkCheckIcon = () => {
 
   useEffect(() => {
     checkControls.set({ opacity: 1 });
-  }, []);
+  });
 
   const animateMovement = async () => {
     await Promise.all([

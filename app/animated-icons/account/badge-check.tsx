@@ -11,7 +11,7 @@ const BadgeCheckIcon = () => {
     circleControls.set({
       opacity: 1,
     });
-  }, []);
+  });
 
   const animateMovement = async () => {
     await Promise.all([

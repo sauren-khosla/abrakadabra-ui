@@ -9,7 +9,7 @@ const AtSignIcon = () => {
 
   useEffect(() => {
     circleControls.set({ opacity: 1, pathLength: 1 });
-  }, []);
+  });
 
   const animateMovement = async () => {
     await Promise.all([
