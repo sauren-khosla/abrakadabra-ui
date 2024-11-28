@@ -25,7 +25,7 @@ export default function Commands() {
             title="Recents Command"
             id="recents-command"
             description="A command component that displays recently used commands for quick access."
-            codeLink="https://github.com/sauren-khosla/abrakadabra-ui/blob/main/app/component-variants/commands/recents-command.tsx"
+            codeLink="https://github.com/sauren-khosla/alakazam-ui/blob/main/app/component-variants/commands/recents-command.tsx"
           />
           <ComponentCard>
             <RecentsCommandDemo />
@@ -35,7 +35,7 @@ export default function Commands() {
             title="Categories Command"
             id="categories-command"
             description="A command component organized into categories, allowing users to navigate and select commands efficiently."
-            codeLink="https://github.com/sauren-khosla/abrakadabra-ui/blob/main/app/component-variants/commands/categories-command.tsx"
+            codeLink="https://github.com/sauren-khosla/alakazam-ui/blob/main/app/component-variants/commands/categories-command.tsx"
           />
           <ComponentCard>
             <CategoriesCommandDemo />

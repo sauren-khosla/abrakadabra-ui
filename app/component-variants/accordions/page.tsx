@@ -26,7 +26,7 @@ export default function Accordions() {
             title="FAQ Accordion"
             id="faq-accordion"
             description="A component that features accordions designed for frequently asked questions, with capabilities for searching and filtering by tags."
-            codeLink="https://github.com/sauren-khosla/abrakadabra-ui/blob/main/app/component-variants/accordions/faq-accordion.tsx"
+            codeLink="https://github.com/sauren-khosla/alakazam-ui/blob/main/app/component-variants/accordions/faq-accordion.tsx"
           />
           <ComponentCard>
             <FAQAccordionDemo />
@@ -35,7 +35,7 @@ export default function Accordions() {
             title="Process Accordion"
             id="process-accordion"
             description="A component that displays process steps with a progress bar and expandable descriptions."
-            codeLink="https://github.com/sauren-khosla/abrakadabra-ui/blob/main/app/component-variants/accordions/process-accordion.tsx"
+            codeLink="https://github.com/sauren-khosla/alakazam-ui/blob/main/app/component-variants/accordions/process-accordion.tsx"
           />
           <ComponentCard>
             <ProcessAccordionDemo />
@@ -44,7 +44,7 @@ export default function Accordions() {
             title="Features Accordion"
             id="features-accordion"
             description="A component that displays product features in an accordion format, allowing users to expand each feature to view its details."
-            codeLink="https://github.com/sauren-khosla/abrakadabra-ui/blob/main/app/component-variants/accordions/features-accordion.tsx"
+            codeLink="https://github.com/sauren-khosla/alakazam-ui/blob/main/app/component-variants/accordions/features-accordion.tsx"
           />
           <ComponentCard>
             <FeaturesAccordion />

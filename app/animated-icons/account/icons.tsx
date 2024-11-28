@@ -3,6 +3,10 @@ import { AtSignIcon } from "./at-sign";
 import { BadgeCheckIcon } from "./badge-check";
 import { BellIcon } from "./bell";
 import { BellDotIcon } from "./bell-dot";
+import { BookmarkIcon } from "./bookmark";
+import { BookmarkCheckIcon } from "./bookmark-check";
+import { CircleUserIcon } from "./circle-user";
+import { CogIcon } from "./cog";
 
 export function AccountIcons() {
   return (
@@ -11,6 +15,10 @@ export function AccountIcons() {
       <IconCard icon={<BadgeCheckIcon />} iconName="Badge Check" />
       <IconCard icon={<BellIcon />} iconName="Bell" />
       <IconCard icon={<BellDotIcon />} iconName="Bell Dot" />
+      <IconCard icon={<BookmarkIcon />} iconName="Bookmark" />
+      <IconCard icon={<BookmarkCheckIcon />} iconName="Bookmark Check" />
+      <IconCard icon={<CircleUserIcon />} iconName="Circle User" />
+      <IconCard icon={<CogIcon />} iconName="Cog" />
     </div>
   );
 }

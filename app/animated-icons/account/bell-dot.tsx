@@ -7,6 +7,10 @@ const BellDotIcon = () => {
   const circleControls = useAnimation();
 
   const animateMovement = async () => {
+    await circleControls.set({
+      opacity: 1,
+      pathLength: 1,
+    });
     for (let i = 0; i < 3; i++) {
       await circleControls.start({
         scale: 1.6,

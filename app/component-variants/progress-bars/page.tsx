@@ -31,7 +31,7 @@ export default function ProgressBars() {
             title="Battery Progress"
             id="battery-progress"
             description="A progress indicator that visually represents battery levels, mimicking a battery's charge state."
-            codeLink="https://github.com/sauren-khosla/abrakadabra-ui/blob/main/app/component-variants/progress-bars/battery-progress.tsx"
+            codeLink="https://github.com/sauren-khosla/alakazam-ui/blob/main/app/component-variants/progress-bars/battery-progress.tsx"
           />
           <ComponentCard>
             <BatteryProgressDemo />
@@ -41,7 +41,7 @@ export default function ProgressBars() {
             title="Circle with Icon"
             id="circle-with-icon"
             description="A circular progress indicator that integrates an icon at its center, enhancing visual feedback."
-            codeLink="https://github.com/sauren-khosla/abrakadabra-ui/blob/main/app/component-variants/progress-bars/circle-icon-progress.tsx"
+            codeLink="https://github.com/sauren-khosla/alakazam-ui/blob/main/app/component-variants/progress-bars/circle-icon-progress.tsx"
             notShadcn={true}
           />
           <ComponentCard>
@@ -52,7 +52,7 @@ export default function ProgressBars() {
             title="Circular"
             id="circular"
             description="A standard circular progress indicator, ideal for representing ongoing processes."
-            codeLink="https://github.com/sauren-khosla/abrakadabra-ui/blob/main/app/component-variants/progress-bars/circular-progress.tsx"
+            codeLink="https://github.com/sauren-khosla/alakazam-ui/blob/main/app/component-variants/progress-bars/circular-progress.tsx"
             notShadcn={true}
           />
           <ComponentCard>
@@ -63,7 +63,7 @@ export default function ProgressBars() {
             title="Floating Label"
             id="floating-label"
             description="A progress indicator with a floating label that displays dynamic progress values."
-            codeLink="https://github.com/sauren-khosla/abrakadabra-ui/blob/main/app/component-variants/progress-bars/floating-label-progress.tsx"
+            codeLink="https://github.com/sauren-khosla/alakazam-ui/blob/main/app/component-variants/progress-bars/floating-label-progress.tsx"
           />
           <ComponentCard>
             <FloatingLabelProgressDemo />
@@ -73,7 +73,7 @@ export default function ProgressBars() {
             title="Segmented"
             id="segmented"
             description="A segmented progress indicator that breaks down progress into distinct, labeled segments."
-            codeLink="https://github.com/sauren-khosla/abrakadabra-ui/blob/main/app/component-variants/progress-bars/segmented-progress.tsx"
+            codeLink="https://github.com/sauren-khosla/alakazam-ui/blob/main/app/component-variants/progress-bars/segmented-progress.tsx"
             notShadcn={true}
           />
           <ComponentCard>

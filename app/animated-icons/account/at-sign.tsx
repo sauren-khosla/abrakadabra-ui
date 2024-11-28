@@ -1,11 +1,15 @@
 "use client";
 
-import React from "react";
+import React, { useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
 
 const AtSignIcon = () => {
   const circleControls = useAnimation();
   const atControls = useAnimation();
+
+  useEffect(() => {
+    circleControls.set({ opacity: 1, pathLength: 1 });
+  }, []);
 
   const animateMovement = async () => {
     await Promise.all([

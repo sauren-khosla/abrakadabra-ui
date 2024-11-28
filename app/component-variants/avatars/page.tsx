@@ -27,7 +27,7 @@ export default function Avatars() {
             title="Status Avatar"
             id="status-avatar"
             description="An avatar component that displays a user's profile picture with an online/offline status indicator."
-            codeLink="https://github.com/sauren-khosla/abrakadabra-ui/blob/main/app/component-variants/avatars/status-avatar.tsx"
+            codeLink="https://github.com/sauren-khosla/alakazam-ui/blob/main/app/component-variants/avatars/status-avatar.tsx"
           />
           <ComponentCard>
             <StatusAvatarDemo />
@@ -37,7 +37,7 @@ export default function Avatars() {
             title="Dropdown Avatar"
             id="dropdown-avatar"
             description="An avatar component with a dropdown menu for user settings or profile actions."
-            codeLink="https://github.com/sauren-khosla/abrakadabra-ui/blob/main/app/component-variants/avatars/dropdown-avatar.tsx"
+            codeLink="https://github.com/sauren-khosla/alakazam-ui/blob/main/app/component-variants/avatars/dropdown-avatar.tsx"
           />
           <ComponentCard className="">
             <DropdownAvatarDemo />
@@ -47,7 +47,7 @@ export default function Avatars() {
             title="Group Avatar"
             id="group-avatar"
             description="An avatar component that displays a group of users in a stacked or clustered format."
-            codeLink="https://github.com/sauren-khosla/abrakadabra-ui/blob/main/app/component-variants/avatars/group-avatar.tsx"
+            codeLink="https://github.com/sauren-khosla/alakazam-ui/blob/main/app/component-variants/avatars/group-avatar.tsx"
           />
           <ComponentCard>
             <GroupAvatarDemo />

@@ -39,7 +39,7 @@ export function IconCard({
   };
 
   const handleViewOnGitHub = () => {
-    const url = `https://github.com/sauren-khosla/abrakadabra-ui/blob/main/app/animated-icons/social/${iconName}.tsx`;
+    const url = `https://github.com/sauren-khosla/alakazam-ui/blob/main/app/animated-icons/social/${iconName}.tsx`;
     window.open(url, "_blank");
   };
 

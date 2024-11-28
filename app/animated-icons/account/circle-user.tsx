@@ -3,20 +3,26 @@
 import React from "react";
 import { motion, useAnimation } from "framer-motion";
 
-const ZoomInIcon = () => {
-  const zoomInControls = useAnimation();
+const CircleUserIcon = () => {
+  const iconControls = useAnimation();
 
   const animateMovement = async () => {
-    await zoomInControls.start({
-      scale: 1.6,
+    await iconControls.set({
+      pathLength: 0,
+      opacity: 0,
+    });
+    await iconControls.start({
+      pathLength: 1,
+      opacity: 1,
       transition: { duration: 1, ease: "easeInOut" },
     });
   };
 
   const resetMovement = async () => {
-    await zoomInControls.stop();
-    await zoomInControls.set({
-      scale: 1,
+    await iconControls.stop();
+    await iconControls.set({
+      pathLength: 1,
+      opacity: 1,
     });
   };
 
@@ -26,7 +32,7 @@ const ZoomInIcon = () => {
       onMouseEnter={animateMovement}
       onMouseLeave={resetMovement}
     >
-      <motion.svg
+      <svg
         xmlns="http://www.w3.org/2000/svg"
         width="24"
         height="24"
@@ -36,16 +42,17 @@ const ZoomInIcon = () => {
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
-        className="lucide lucide-zoom-in"
-        animate={zoomInControls}
+        className="lucide lucide-circle-user"
       >
-        <circle cx="11" cy="11" r="8" />
-        <line x1="21" x2="16.65" y1="21" y2="16.65" />
-        <line x1="11" x2="11" y1="8" y2="14" />
-        <line x1="8" x2="14" y1="11" y2="11" />
-      </motion.svg>
+        <circle cx="12" cy="12" r="10" />
+        <motion.circle cx="12" cy="10" r="3" animate={iconControls} />
+        <motion.path
+          d="M7 20.662V19a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v1.662"
+          animate={iconControls}
+        />
+      </svg>
     </div>
   );
 };
 
-export { ZoomInIcon };
+export { CircleUserIcon };

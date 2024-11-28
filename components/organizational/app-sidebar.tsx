@@ -47,7 +47,7 @@ export function AppSidebar() {
       <SidebarContent>
         <SidebarGroup>
           <SidebarGroupLabel className="flex justify-between">
-            <span>abrakadabra-ui</span>
+            <span>alakazam-ui</span>
             <button>
               <Sun size={14} />
             </button>

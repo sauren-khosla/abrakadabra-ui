@@ -3,44 +3,48 @@
 import React, { useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
 
-const BadgeCheckIcon = () => {
-  const circleControls = useAnimation();
+const BookmarkCheckIcon = () => {
+  const iconControls = useAnimation();
   const checkControls = useAnimation();
 
   useEffect(() => {
-    circleControls.set({
-      opacity: 1,
-    });
+    checkControls.set({ opacity: 1 });
   }, []);
 
   const animateMovement = async () => {
     await Promise.all([
-      circleControls.set({
-        opacity: 0,
+      iconControls.start({
+        y: -5,
+        transition: { duration: 0.5, ease: "easeIn" },
       }),
       checkControls.set({
-        pathLength: 0,
+        opacity: 0,
       }),
     ]);
-    await checkControls.start({
-      pathLength: 1,
-      transition: { duration: 0.8, ease: "easeInOut" },
+    await iconControls.start({
+      y: 5,
+      transition: { duration: 0.2, ease: "easeIn" },
     });
-    await circleControls.start({
-      opacity: 1,
-      transition: { duration: 0.5, ease: "easeInOut" },
-    });
+    await Promise.all([
+      iconControls.start({
+        y: 0,
+        transition: { duration: 0.2, ease: "easeInOut" },
+      }),
+      checkControls.set({
+        opacity: 1,
+      }),
+    ]);
   };
 
   const resetMovement = async () => {
-    await Promise.all([checkControls.stop(), circleControls.stop()]);
+    await iconControls.stop();
     await Promise.all([
-      circleControls.set({
-        opacity: 1,
+      iconControls.set({
+        x: 0,
+        y: 0,
       }),
       checkControls.set({
         opacity: 1,
-        pathLength: 1,
       }),
     ]);
   };
@@ -51,7 +55,7 @@ const BadgeCheckIcon = () => {
       onMouseEnter={animateMovement}
       onMouseLeave={resetMovement}
     >
-      <svg
+      <motion.svg
         xmlns="http://www.w3.org/2000/svg"
         width="24"
         height="24"
@@ -61,16 +65,14 @@ const BadgeCheckIcon = () => {
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
-        className="lucide lucide-badge-check"
+        className="lucide lucide-bookmark-check"
+        animate={iconControls}
       >
-        <motion.path
-          d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"
-          animate={circleControls}
-        />
-        <motion.path d="m9 12 2 2 4-4" animate={checkControls} />
-      </svg>
+        <path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2Z" />
+        <motion.path d="m9 10 2 2 4-4" animate={checkControls} />
+      </motion.svg>
     </div>
   );
 };
 
-export { BadgeCheckIcon };
+export { BookmarkCheckIcon };

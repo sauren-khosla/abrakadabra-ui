@@ -27,7 +27,7 @@ export default function Badges() {
             title="Icon Badge"
             id="icon-badge"
             description="A badge component that includes an icon alongside text."
-            codeLink="https://github.com/sauren-khosla/abrakadabra-ui/blob/main/app/component-variants/badges/icon-badge.tsx"
+            codeLink="https://github.com/sauren-khosla/alakazam-ui/blob/main/app/component-variants/badges/icon-badge.tsx"
           />
           <ComponentCard>
             <IconBadgeDemo />
@@ -37,7 +37,7 @@ export default function Badges() {
             title="Group Badge"
             id="group-badge"
             description="A badge component that displays a group of badges together."
-            codeLink="https://github.com/sauren-khosla/abrakadabra-ui/blob/main/app/component-variants/badges/group-badge.tsx"
+            codeLink="https://github.com/sauren-khosla/alakazam-ui/blob/main/app/component-variants/badges/group-badge.tsx"
           />
           <ComponentCard>
             <GroupBadgeDemo />
@@ -47,7 +47,7 @@ export default function Badges() {
             title="Close Badge"
             id="close-badge"
             description="A badge component with a close or remove icon."
-            codeLink="https://github.com/sauren-khosla/abrakadabra-ui/blob/main/app/component-variants/badges/close-badge.tsx"
+            codeLink="https://github.com/sauren-khosla/alakazam-ui/blob/main/app/component-variants/badges/close-badge.tsx"
           />
           <ComponentCard>
             <CloseBadgeDemo />

@@ -23,7 +23,7 @@ export default function MenuBars() {
             title="Multi-Level Menubar"
             id="multi-level-menubar"
             description="A menubar component that supports multiple levels of navigation, allowing for complex menu structures."
-            codeLink="https://github.com/sauren-khosla/abrakadabra-ui/blob/main/app/component-variants/menu-bars/multi-level-menubar.tsx"
+            codeLink="https://github.com/sauren-khosla/alakazam-ui/blob/main/app/component-variants/menu-bars/multi-level-menubar.tsx"
           />
           <ComponentCard>
             <MultiLevelMenubarDemo />

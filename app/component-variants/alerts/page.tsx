@@ -25,7 +25,7 @@ export default function Alerts() {
             title="Dismissible Alert"
             id="dismissible-alert"
             description="An alert component that can be dismissed by the user."
-            codeLink="https://github.com/sauren-khosla/abrakadabra-ui/blob/main/app/component-variants/alerts/dismissible-alert.tsx"
+            codeLink="https://github.com/sauren-khosla/alakazam-ui/blob/main/app/component-variants/alerts/dismissible-alert.tsx"
           />
           <ComponentCard>
             <DismissibleAlertDemo />
@@ -35,7 +35,7 @@ export default function Alerts() {
             title="Timed Alert"
             id="timed-alert"
             description="An alert component that disappears after a set amount of time."
-            codeLink="https://github.com/sauren-khosla/abrakadabra-ui/blob/main/app/component-variants/alerts/timed-alert.tsx"
+            codeLink="https://github.com/sauren-khosla/alakazam-ui/blob/main/app/component-variants/alerts/timed-alert.tsx"
           />
           <ComponentCard>
             <TimedAlertDemo />

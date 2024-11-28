@@ -3,20 +3,29 @@
 import React from "react";
 import { motion, useAnimation } from "framer-motion";
 
-const ZoomInIcon = () => {
-  const zoomInControls = useAnimation();
+const BookmarkIcon = () => {
+  const iconControls = useAnimation();
 
   const animateMovement = async () => {
-    await zoomInControls.start({
-      scale: 1.6,
-      transition: { duration: 1, ease: "easeInOut" },
+    await iconControls.start({
+      y: -5,
+      transition: { duration: 0.5, ease: "easeIn" },
+    });
+    await iconControls.start({
+      y: 5,
+      transition: { duration: 0.2, ease: "easeIn" },
+    });
+    await iconControls.start({
+      y: 0,
+      transition: { duration: 0.2, ease: "easeInOut" },
     });
   };
 
   const resetMovement = async () => {
-    await zoomInControls.stop();
-    await zoomInControls.set({
-      scale: 1,
+    await iconControls.stop();
+    await iconControls.set({
+      x: 0,
+      y: 0,
     });
   };
 
@@ -36,16 +45,13 @@ const ZoomInIcon = () => {
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
-        className="lucide lucide-zoom-in"
-        animate={zoomInControls}
+        className="lucide lucide-bookmark"
+        animate={iconControls}
       >
-        <circle cx="11" cy="11" r="8" />
-        <line x1="21" x2="16.65" y1="21" y2="16.65" />
-        <line x1="11" x2="11" y1="8" y2="14" />
-        <line x1="8" x2="14" y1="11" y2="11" />
+        <path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z" />
       </motion.svg>
     </div>
   );
 };
 
-export { ZoomInIcon };
+export { BookmarkIcon };

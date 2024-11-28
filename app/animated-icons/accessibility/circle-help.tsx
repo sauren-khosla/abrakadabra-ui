@@ -1,11 +1,19 @@
 "use client";
 
 import { motion, useAnimation } from "framer-motion";
-import React from "react";
+import React, { useEffect } from "react";
 
 const CircleHelpIcon = () => {
   const questionMarkControls = useAnimation();
   const dotControls = useAnimation();
+
+  useEffect(() => {
+    dotControls.set({
+      opacity: 1,
+      scale: 1,
+      pathLength: 1,
+    });
+  }, []);
 
   const animateIcon = async () => {
     await Promise.all([
@@ -20,10 +28,6 @@ const CircleHelpIcon = () => {
         pathLength: 0,
       }),
     ]);
-
-    await dotControls.set({
-      opacity: 0,
-    });
 
     await questionMarkControls.start({
       pathLength: 1,
@@ -82,13 +86,8 @@ const CircleHelpIcon = () => {
         <motion.path
           d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"
           animate={questionMarkControls}
-          initial={{ pathLength: 1, opacity: 1 }}
         />
-        <motion.path
-          d="M12 17h.01"
-          animate={dotControls}
-          initial={{ opacity: 1, pathLength: 1 }}
-        />
+        <motion.path d="M12 17h.01" animate={dotControls} />
       </motion.svg>
     </div>
   );
